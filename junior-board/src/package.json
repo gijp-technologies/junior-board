@@ -1,0 +1,19 @@
+{
+  "name": "junior-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ilyrodriguez/junior-board.git"
+  },
+  "author": "Ileana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilyrodriguez/junior-board/issues"
+  },
+  "homepage": "https://github.com/ilyrodriguez/junior-board#readme"
+}
