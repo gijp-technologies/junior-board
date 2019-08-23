@@ -33,5 +33,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Project 3 for Greg, Ileana, Jose and Pri",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gijp-technologies/junior-board.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gijp-technologies/junior-board/issues"
+  },
+  "homepage": "https://github.com/gijp-technologies/junior-board#readme"
 }
