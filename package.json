@@ -1,49 +1,24 @@
 {
   "name": "junior-board",
-  "version": "0.1.0",
-  "private": true,
-  "main": "server.js",
-  "engines": {
-    "npm": "6.4.1",
-    "node": "10.15.1"
-  },
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "mongodb": "2.0.49"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"cd backend && node server.js\" \"cd client && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "Project 3 for Greg, Ileana, Jose and Pri",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gijp-technologies/junior-board.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gijp-technologies/junior-board/issues"
   },
-  "homepage": "https://github.com/gijp-technologies/junior-board#readme"
+  "homepage": "https://github.com/gijp-technologies/junior-board#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  }
 }
