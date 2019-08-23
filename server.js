@@ -7,13 +7,14 @@ const Data = require('./data');
 const path = require("path");
 require("dotenv").config();
 
-// ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
-
 const API_PORT = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
 const router = express.Router();
+
+
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 // this is our MongoDB database
 const dbRoute = process.env.MONGODB_URI || "mongodb://localhost/junior";
