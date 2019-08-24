@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Nav from '../components/Navbar/Nav.js';
 
 function Main() {
+
   return (
     <div className="Main">
       <Nav />

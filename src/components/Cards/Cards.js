@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import Card from "react-bootstrap/Card";
 
 class Juniors extends Component {
+
+    componentDidMount() {
+        this.setState({
+            existingProfile: "mock"
+
+        })
+    }
+
     render() {
         return (
             <Card style={{ width: '18rem' }}>
