@@ -1,18 +1,16 @@
 import React from "react";
-import Header from "./components/Jumbotron/Jumbotron.js";
-import Juniors from "./components/Cards/Cards";
-import Footer from "./components/Footer/Footer";
-import './App.css';
-import Nav from './components/Navbar/Nav.js';
+// import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "./Pages/Main";
+import Form from "./Pages/Form";
+
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Header />
-      <Juniors />
-      <Footer />
-    </div>
+      <Router>
+        <Route exact path="/" component={Main} />
+        <Route exact path="/form" component={Form} />
+      </Router>
   );
 }
 
