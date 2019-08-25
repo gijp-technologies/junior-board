@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from "react-bootstrap/Card";
+import './Style.css';
 
 class Juniors extends Component {
 
@@ -12,7 +13,7 @@ class Juniors extends Component {
 
     render() {
         return (
-            <Card style={{ width: '18rem' }}>
+            <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
