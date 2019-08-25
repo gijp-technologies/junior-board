@@ -6,14 +6,14 @@ import Nav from '../components/Navbar/Nav.js';
 
 function Main() {
 
-  return (
-    <div className="Main">
-      <Nav />
-      <Header />
-      <Juniors />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="Main">
+            <Nav />
+            <Header />
+            <Juniors />
+            <Footer />
+        </div>
+    );
 }
 
 export default Main;
