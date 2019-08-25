@@ -23,6 +23,17 @@ class Juniors extends Component {
                             <Card.Title>{dev.firstName + " " + dev.lastName}</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">{dev.city + ", " + dev.state}</Card.Subtitle>
                             <Card.Text>
+                                Phone: 
+                    </Card.Text>
+                    <Card.Text>
+                                Some quick example text to build on the card title and make up the bulk of
+                                the card's content.
+                    </Card.Text>
+                    <Card.Text>
+                                Some quick example text to build on the card title and make up the bulk of
+                                the card's content.
+                    </Card.Text>
+                    <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                     </Card.Text>
