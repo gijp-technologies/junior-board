@@ -9,10 +9,14 @@ class JuniorForm extends Component {
         Name: "",
         LastName: "",
         email: "",
-        Link: "",
-        Link2: "",
-        Link3: "",
-        Description: ""
+        phone: "",
+        city: "",
+        state: "",
+        picture: "",
+        link1: "",
+        link2: "",
+        link3: "",
+        skillset: ""
     }
     handleChange = e => {
         const { name, value } = e.target
