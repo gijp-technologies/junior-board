@@ -40,6 +40,7 @@ class JuniorForm extends Component {
             picture: "",
             link1: "",
             link2: "",
+            link3: "",
             skillset: ""
         })
     }
@@ -65,7 +66,7 @@ class JuniorForm extends Component {
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridPhone">
                         <Form.Label> Phone Number </Form.Label>
-                        <Form.Control type="number" placeholder="555-555-5555" value={this.state.phone} onChange={this.handleInputChange} />
+                        <Form.Control type="text" placeholder="555-555-5555" value={this.state.phone} onChange={this.handleInputChange} />
                     </Form.Group>
                 </Row>
                 <Row>
@@ -84,28 +85,34 @@ class JuniorForm extends Component {
 
                     <Form.Group as={Col} controlId="formGridZip">
                         <Form.Label> Zipcode </Form.Label>
-                        <Form.Control type="number" placeholder="Zipcode" value={this.state.zipcode} onChange={this.handleInputChange} />
+                        <Form.Control type="text" placeholder="Zipcode" value={this.state.zipcode} onChange={this.handleInputChange} />
                     </Form.Group>
+                    </Row>
 
+                    <Row>
                     <Form.Group as={Col} controlId="formGridpicture">
                         <Form.Label> Link to your picture </Form.Label>
                         <Form.Control type="text" placeholder="Link to picture" value={this.state.picture} onChange={this.handleInputChange} />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridlink1">
+                        <Form.Label> Link </Form.Label>
+                        <Form.Control type="text" placeholder="Portfolio, LinkedIn, github" value={this.state.link1} onChange={this.handleInputChange} />
                     </Form.Group>
                 </Row>
                 <Row>
                     <Form.Group as={Col} controlId="formGridlink1">
                         <Form.Label> Link </Form.Label>
-                        <Form.Control type="Link" placeholder="Portfolio, LinkedIn, github" value={this.state.link1} onChange={this.handleInputChange} />
+                        <Form.Control type="text" placeholder="Portfolio, LinkedIn, github" value={this.state.link2} onChange={this.handleInputChange} />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridlink2">
                         <Form.Label> Link </Form.Label>
-                        <Form.Control type="Link" placeholder="Portfolio, LinkedIn, github" value={this.state.link2} onChange={this.handleInputChange} />
+                        <Form.Control type="text" placeholder="Portfolio, LinkedIn, github" value={this.state.link3} onChange={this.handleInputChange} />
                     </Form.Group>
                 </Row>
                 <Row>
                     <Form.Group as={Col} controlId="exampleForm.ControlTextarea1">
                         <Form.Label> Skillset </Form.Label>
-                        <Form.Control as="textarea" rows="10" />
+                        <Form.Control as="textarea" rows="4" />
                     </Form.Group>
                 </Row>
 
