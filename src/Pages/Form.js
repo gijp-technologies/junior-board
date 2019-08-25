@@ -7,12 +7,13 @@ import axios from 'axios';
 
 class JuniorForm extends Component {
     state = {
-        Name: "",
+        firstName: "",
         LastName: "",
         email: "",
         phone: "",
         city: "",
         state: "",
+        zipcode: "",
         picture: "",
         link1: "",
         link2: "",
@@ -29,19 +30,22 @@ class JuniorForm extends Component {
     handleFormSubmit = e => {
         const { name, value } = this.state;
         // this is where we are posting to set network for DB update. When response comes back with new info will update existing profile and display:
-        axios.post("url", {
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email,
-            phone: this.state.phone,
-            city: this.state.city,
-            state: this.state.state,
-            picture: this.state.picture,
-            link1: this.state.link1,
-            link2: this.state.link2,
-            link3: this.state.link2,
-            skillset: this.state.skillset
-        }).then(res=>{
+       
+        // axios.post("url", {
+        //     firstName: this.state.firstName,
+        //     lastName: this.state.lastName,
+        //     email: this.state.email,
+        //     phone: this.state.phone,
+        //     city: this.state.city,
+        //     state: this.state.state,
+        //     picture: this.state.picture,
+        //     link1: this.state.link1,
+        //     link2: this.state.link2,
+        //     link3: this.state.link2,
+        //     skillset: this.state.skillset
+        // }).then(res=>{
+        //     console(res);
+        
         // access the response that will be in res.data
         // this.setState({
         // existingProfile:res.data
@@ -49,19 +53,19 @@ class JuniorForm extends Component {
         // }).catch(err=>{
         // if err handle err here
         // })
-        this.setState({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            city: "",
-            state: "",
-            picture: "",
-            link1: "",
-            link2: "",
-            link3: "",
-            skillset: ""
-        })
+        // this.setState({
+        //     firstName: "",
+        //     lastName: "",
+        //     email: "",
+        //     phone: "",
+        //     city: "",
+        //     state: "",
+        //     picture: "",
+        //     link1: "",
+        //     link2: "",
+        //     link3: "",
+        //     skillset: ""
+        // })
     }
 
 
