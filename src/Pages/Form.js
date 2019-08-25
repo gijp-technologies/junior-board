@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Form, Col, Button, Row } from "react-bootstrap";
-// import Row from 'react-bootstrap/Row';
+import './style.css';
 
-
-class Nav extends Component {
+class JuniorForm extends Component {
     state = {
         Name: "",
         LastName: "",
@@ -35,69 +34,87 @@ class Nav extends Component {
             firstName: "",
             lastName: "",
             email: "",
-            Link: "",
-            Link2: "",
-            Link3: "",
-            Description: ""
+            phone: "",
+            city: "",
+            state: "",
+            picture: "",
+            link1: "",
+            link2: "",
+            skillset: ""
         })
     }
 
 
     render() {
         return (
-            <Form>
+            <form className="form">
                 <Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Group as={Col} controlId="formGridfirstName">
+                        <Form.Label> First Name </Form.Label>
+                        <Form.Control type="name" placeholder="First Name" value={this.state.firstName} onChange={this.handleInputChange} />
                     </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                    <Form.Group as={Col} controlId="formGridlastName">
+                        <Form.Label> Last Name </Form.Label>
+                        <Form.Control type="name" placeholder="Last Name" value={this.state.lastName} onChange={this.handleInputChange} />
                     </Form.Group>
                 </Row>
-
-                <Form.Group controlId="formGridAddress1">
-                    <Form.Label>Address</Form.Label>
-                    <Form.Control placeholder="1234 Main St" />
-                </Form.Group>
-
-                <Form.Group controlId="formGridAddress2">
-                    <Form.Label>Address 2</Form.Label>
-                    <Form.Control placeholder="Apartment, studio, or floor" />
-                </Form.Group>
-
+                <Row>
+                    <Form.Group as={Col} controlId="formGridEmail">
+                        <Form.Label> Email </Form.Label>
+                        <Form.Control type="email" placeholder="Email Address" value={this.state.email} onChange={this.handleInputChange} />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridPhone">
+                        <Form.Label> Phone Number </Form.Label>
+                        <Form.Control type="number" placeholder="555-555-5555" value={this.state.phone} onChange={this.handleInputChange} />
+                    </Form.Group>
+                </Row>
                 <Row>
                     <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>City</Form.Label>
-                        <Form.Control />
+                        <Form.Label> City </Form.Label>
+                        <Form.Control type="text" placeholder="City" value={this.state.city} onChange={this.handleInputChange} />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>State</Form.Label>
-                        <Form.Control as="select">
-                            <option>Choose...</option>
-                            <option>...</option>
+                        <Form.Label> State </Form.Label>
+                        <Form.Control type="text" placeholder="State" value={this.state.state} onChange={this.handleInputChange}>
+                            {/* <option>Choose...</option>
+                                <option>...</option> */}
                         </Form.Control>
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>Zip</Form.Label>
-                        <Form.Control />
+                        <Form.Label> Zipcode </Form.Label>
+                        <Form.Control type="number" placeholder="Zipcode" value={this.state.zipcode} onChange={this.handleInputChange} />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridpicture">
+                        <Form.Label> Link to your picture </Form.Label>
+                        <Form.Control type="text" placeholder="Link to picture" value={this.state.picture} onChange={this.handleInputChange} />
+                    </Form.Group>
+                </Row>
+                <Row>
+                    <Form.Group as={Col} controlId="formGridlink1">
+                        <Form.Label> Link </Form.Label>
+                        <Form.Control type="Link" placeholder="Portfolio, LinkedIn, github" value={this.state.link1} onChange={this.handleInputChange} />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridlink2">
+                        <Form.Label> Link </Form.Label>
+                        <Form.Control type="Link" placeholder="Portfolio, LinkedIn, github" value={this.state.link2} onChange={this.handleInputChange} />
+                    </Form.Group>
+                </Row>
+                <Row>
+                    <Form.Group as={Col} controlId="exampleForm.ControlTextarea1">
+                        <Form.Label> Skillset </Form.Label>
+                        <Form.Control as="textarea" rows="10" />
                     </Form.Group>
                 </Row>
 
-                <Form.Group id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" onClick={this.handleFormSubmit}>
                     Submit
-  </Button>
-            </Form>
+                </Button>
+            </form>
         );
     }
 }
 
-export default Nav;
+export default JuniorForm;
