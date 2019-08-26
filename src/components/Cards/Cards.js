@@ -4,8 +4,8 @@ import './Style.css';
 // import JuniorDevs from "../API/JuniorDevs.json";
 
 const JuniorsDevs = require("../API/JuniorsDevs.json");
-class Juniors extends Component {
 
+class Juniors extends Component {
 
     componentDidMount() {
         this.setState({
@@ -16,9 +16,9 @@ class Juniors extends Component {
 
     render() {
         return (
-            <div className= "c">
+            <div className="JrCard">
                 {JuniorsDevs.map((dev, key) =>
-                    <Card className="Card" style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem' }}>
                         <Card.Body>
                             <row>
 
@@ -36,9 +36,9 @@ class Juniors extends Component {
                                 <Card.Text>
                                     Skills: {" " + dev.skillset}
                                 </Card.Text>
-                                <Card.Link href={dev.link1}>Card Link</Card.Link>
-                                <Card.Link href={dev.link2}>Another Link</Card.Link>
-                                <Card.Link href={dev.link3}>Link 3</Card.Link>
+                                <Card.Link href={dev.link1} target="blank">Card Link</Card.Link>
+                                <Card.Link href={dev.link2} target="blank">Another Link</Card.Link>
+                                <Card.Link href={dev.link3} target="blank">Link 3</Card.Link>
                             </row>
                         </Card.Body>
                     </Card>

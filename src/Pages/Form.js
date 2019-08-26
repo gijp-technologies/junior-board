@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Col, Button, Row } from "react-bootstrap";
-import './style.css';
+import "./Style.css";
 import Footer from '../components/Footer/Footer'
 import Nav from '../components/Navbar/Nav'
 import axios from 'axios';
@@ -56,6 +56,7 @@ class JuniorForm extends Component {
         // }).catch(err=>{
         // if err handle err here
         // })
+        
         // this.setState({
         //     firstName: "",
         //     lastName: "",
