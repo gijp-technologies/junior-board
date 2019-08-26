@@ -16,33 +16,32 @@ class Juniors extends Component {
 
     render() {
         return (
-            <div>
+            <div className= "c">
                 {JuniorsDevs.map((dev, key) =>
                     <Card className="Card" style={{ width: '18rem' }}>
                         <Card.Body>
-                            <Card.Title>{dev.firstName + " " + dev.lastName}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{dev.city + ", " + dev.state}</Card.Subtitle>
-                            <Card.Text>
-                                Phone: 
-                    </Card.Text>
-                    <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                    </Card.Text>
-                    <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                    </Card.Text>
-                    <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                    </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
+                            <row>
+
+                                <Card.Title>{dev.firstName + " " + dev.lastName}</Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">{dev.city + ", " + dev.state}</Card.Subtitle>
+                                <Card.Text>
+                                    Phone: {" " + dev.phone}
+                                </Card.Text>
+                                <Card.Text>
+                                    Email: {" " + dev.email}
+                                </Card.Text>
+                            </row>
+
+                            <row>
+                                <Card.Text>
+                                    Skills: {" " + dev.skillset}
+                                </Card.Text>
+                                <Card.Link href={dev.link1}>Card Link</Card.Link>
+                                <Card.Link href={dev.link2}>Another Link</Card.Link>
+                                <Card.Link href={dev.link3}>Link 3</Card.Link>
+                            </row>
                         </Card.Body>
-
                     </Card>
-
                 )}
             </div>
         );
