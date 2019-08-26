@@ -1,4 +1,28 @@
 .card{
-    margin-left: 5%;
-    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    display: inline-block !important;
+    height: 320px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-gap: 1em; */
 }
+.card-info{
+    margin-left: 2%;
+}
+.skillset{
+    margin-top: 2%;
+}
+.card-footer{
+   bottom: 0 !important;
+   /* margin-top: 40px;   */
+}
+.image-placeholder{
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    background-color: blue;
+}
+/* .card-top-section{
+    display: inline-block !important;
+} */

@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import Card from "react-bootstrap/Card";
 import './Style.css';
-// import JuniorDevs from "../API/JuniorDevs.json";
-
 const JuniorsDevs = require("../API/JuniorsDevs.json");
-class Juniors extends Component {
 
+class Juniors extends Component {
 
     componentDidMount() {
         this.setState({
@@ -18,31 +16,31 @@ class Juniors extends Component {
         return (
             <div>
                 {JuniorsDevs.map((dev, key) =>
-                    <Card className="Card" style={{ width: '18rem' }}>
+                    <Card style={{ width: '28rem' }}>
                         <Card.Body>
-                            <Card.Title>{dev.firstName + " " + dev.lastName}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{dev.city + ", " + dev.state}</Card.Subtitle>
-                            <Card.Text>
-                                Phone: 
-                    </Card.Text>
-                    <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                    </Card.Text>
-                    <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                    </Card.Text>
-                    <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                    </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
+                            <row className="card-top-section">
+                                {/* IMAGE GOES HERE: */}
+                                <span><div className="image-placeholder"></div>
+                                <Card.Title className="card-info" as="h4">{dev.firstName + " " + dev.lastName}</Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{dev.city + ", " + dev.state}</Card.Subtitle>
+                                <Card.Text className="card-info">
+                                Phone: {" " + dev.phone }  Email: {" " + dev.email}
+                                </Card.Text>
+                                </span>
+                            </row>
+
+                            <row>
+                                <Card.Text className="skillset">
+                                Skills: {" " + dev.skillset}
+                                </Card.Text>
+                                <div className="card-footer">
+                                <Card.Link  href={dev.link1} target="blank">Card Link</Card.Link>
+                                <Card.Link  href={dev.link2} target="blank">Another Link</Card.Link>
+                                <Card.Link  href={dev.link3} target="blank">Link 3</Card.Link>
+                                </div>
+                            </row>
                         </Card.Body>
-
                     </Card>
-
                 )}
             </div>
         );
