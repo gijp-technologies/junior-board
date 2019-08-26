@@ -3,6 +3,7 @@ const { isEmpty } = require('lodash');
 const User = require('../models/user');
 const router = express.Router();
 
+// Add User
 router.post('/add', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
@@ -37,6 +38,7 @@ router.post('/add', async (req, res) => {
 });
 
 
+// Get All Users
 router.get('/users', async (req, res) => {
 
     try {
