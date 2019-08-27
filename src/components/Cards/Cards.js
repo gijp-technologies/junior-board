@@ -26,8 +26,7 @@ class Juniors extends Component {
                                 <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{dev.city + ", " + dev.state}</Card.Subtitle>
                                 <Card.Text className="card-info">
                                     Phone: {" " + dev.phone} 
-                                </Card.Text>
-                                <Card.Text className="card-info">
+                                    <br/>
                                     Email: {" " + dev.email}
                                 </Card.Text>
                             </row>
