@@ -15,13 +15,10 @@ class App extends Component {
   fetchUsers = () => {
     axios.get('/users')
       .then((response) => {
-        // const { users } = response.data;
-        this.setState({ users: response.data })
+        const { users } = response.data;
+        this.setState({ users: [...this.state.users, ...users] })
       })
-      .catch((error) => { 
-        alert('Error fetching new users');
-        console.log(error);
-      });
+      .catch(() => alert('Error fetching new users'));
   };
 
 
