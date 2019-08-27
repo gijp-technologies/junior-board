@@ -33,7 +33,7 @@ class DisplayUser extends Component {
                     <TableBody>
                         {users.map(({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }, key) => (
                             <TableRow key={key}>
-                                <TableCell component="th" scope="row"> {fistName ? firstName : 'No First Name Found'} </TableCell>
+                                <TableCell component="th" scope="row"> {firstName ? firstName : 'No First Name Found'} </TableCell>
                                 <TableCell align="right">{lastName ? lastName : 'No Last Name Found'}</TableCell>
                                 <TableCell align="right">{email ? email : 'No Email Found'}</TableCell>
                             </TableRow>
