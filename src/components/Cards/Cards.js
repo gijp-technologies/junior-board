@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Card from "react-bootstrap/Card";
 import './Style.css';
+// import axios from "axios";
 const JuniorsDevs = require("../API/JuniorsDevs.json");
 
 class Juniors extends Component {
@@ -34,9 +35,9 @@ class Juniors extends Component {
                                 Skills: {" " + dev.skillset}
                                 </Card.Text>
                                 <div className="card-footer">
-                                <Card.Link  href={dev.link1} target="blank">Card Link</Card.Link>
-                                <Card.Link  href={dev.link2} target="blank">Another Link</Card.Link>
-                                <Card.Link  href={dev.link3} target="blank">Link 3</Card.Link>
+                                <Card.Link  href={dev.link1} className={dev.link1 ? '' : 'emptyLink'} target="blank">Portfolio</Card.Link>
+                                <Card.Link  href={dev.link2} className={dev.link2 ? '' : 'emptyLink'} target="blank">LinkedIn</Card.Link>
+                                <Card.Link  href={dev.link3} className={dev.link3 ? '' : 'emptyLink'} target="blank">Github</Card.Link>
                                 </div>
                             </row>
                         </Card.Body>
