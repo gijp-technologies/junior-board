@@ -9,6 +9,7 @@ const { isEmpty } = require('lodash');
 class DisplayUser extends Component {
     render() {
         const allUsers = this.props.users;
+        console.log(allUsers);
         const users = !isEmpty(allUsers) ? allUsers : [];
 
         return (
