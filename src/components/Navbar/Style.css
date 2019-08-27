@@ -1,0 +1,9 @@
+#nav-logo{
+    width: 9%;
+    height: auto;
+    margin-left: 5%; 
+}
+.justify-content-end .login-button{
+    margin-right: 100px !important;
+    display: inline-block;
+}
