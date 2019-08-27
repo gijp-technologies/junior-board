@@ -18,7 +18,7 @@ class App extends Component {
         // const { users } = response.data;
         this.setState({ users: response.data })
       })
-      .catch(error, () => { 
+      .catch((error) => { 
         alert('Error fetching new users');
         console.log(error);
       });
