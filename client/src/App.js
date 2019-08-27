@@ -5,11 +5,20 @@ import axios from 'axios';
 import './App.css';
 class App extends Component {
   state = {
-    users: []
+    users: [],
+    user: {}
   }
 
   componentDidMount = () => {
-    this.fetchUsers();
+    // this.fetchUsers();
+
+    axios.get('/users')
+      .then(response => {
+        this.setState({ users: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   fetchUsers = () => {
@@ -24,7 +33,7 @@ class App extends Component {
 
   addUser = ({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }) => {
     this.setState({
-      users: [...this.state.users, { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }]
+      user: { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }
     });
   };
 
