@@ -21,7 +21,7 @@ class Juniors extends Component {
                         <Card.Body>
                             <row className="card-top-section">
                                 {/* IMAGE GOES HERE: */}
-                                <span><div className="image-placeholder"></div>
+                                <span><div className="image-placeholder" src={dev.picture}></div>
                                 <Card.Title className="card-info" as="h4">{dev.firstName + " " + dev.lastName}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{dev.city + ", " + dev.state}</Card.Subtitle>
                                 <Card.Text className="card-info">
