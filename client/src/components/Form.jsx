@@ -25,7 +25,7 @@ class Form extends Component {
 
   submit = e => {
     e.preventDefault();
-    const { name, position, company } = this.state;
+    const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = this.state;
     axios({
       url: '/add',
       method: 'POST',
