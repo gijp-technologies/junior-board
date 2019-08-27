@@ -15,8 +15,8 @@ class App extends Component {
   fetchUsers = () => {
     axios.get('/users')
       .then((response) => {
-        const { users } = response.data;
-        this.setState({ users: [...this.state.users, ...users] })
+        // const { users } = response.data;
+        this.setState({ users: response.data })
       })
       .catch(() => alert('Error fetching new users'));
   };
