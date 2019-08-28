@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Import Components
-import DisplayUsers from './components/DisplayUsers';
-import Form from './components/Form'
-import EditForm from './components/EditForm'
+// Import pages
+import DisplayUsers from './pages/DisplayUsers';
+import Form from './pages/Form'
+import EditForm from './pages/EditForm'
+
+// Import components
+
 
 class App extends Component {
   state = {
