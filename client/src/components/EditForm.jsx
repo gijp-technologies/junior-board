@@ -65,7 +65,7 @@ class EditForm extends Component {
     axios.post('/edit/' + this.props.match.params.email, obj)
       .then(res => {
         console.log(res.data);
-        return this.props.history.push("/home");
+        return this.props.history.push("/");
       });
   };
 
@@ -74,7 +74,7 @@ class EditForm extends Component {
 
     axios.delete('/delete/' + this.props.match.params.email)
       .then(res => {
-        return this.props.history.push("/home");
+        return this.props.history.push("/");
       });
   };
 

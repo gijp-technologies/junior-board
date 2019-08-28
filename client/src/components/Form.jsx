@@ -58,7 +58,7 @@ class Form extends Component {
           link3: '',
           skillset: ''
         });
-        return this.props.history.push("/home");
+        return this.props.history.push("/");
       })
       .catch(() => alert('Failed uploading data'))
   };
