@@ -102,8 +102,8 @@ router.put('/edit/:email', async (req, res) => {
     const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
 
     try {
-        const user = await User.update({
-            email: { $eq: req.params.email},
+        const user = await User.updateOne({
+            email: req.params.email,
             $set: {
                 firstName: firstName,
                 lastName: lastName,
