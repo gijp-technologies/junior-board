@@ -92,6 +92,25 @@ router.get('/edit/:email', async (req, res) => {
 
 
 
+// Delete One
+router.delete('/delete/:email', async (req, res) => {
+
+    try {
+        const user = await User.deleteOne({
+            email: req.params.email
+        });
+
+        console.log(user);
+
+        return console.log("User deleted!");
+        
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+
+});
 
 
 // todoRoutes.route('/update/:id').post(function (req, res) {

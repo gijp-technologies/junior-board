@@ -19,28 +19,25 @@ class EditForm extends Component {
 
   componentDidMount() {
     axios.get('/edit/' + this.props.match.params.email)
-        .then(response => {
-          console.log(response);
-          console.log(response.data);
-          console.log(response.data.user);
-            this.setState({
-                firstName: response.data.user.firstName,
-                lastName: response.data.user.lastName,
-                email: response.data.user.email,
-                phone: response.data.user.phone,
-                city: response.data.user.city,
-                state: response.data.user.state,
-                picture: response.data.user.picture,
-                link1: response.data.user.link1,
-                link2: response.data.user.link2,
-                link3: response.data.user.link3,
-                skillset: response.data.user.skillset
-            })
+      .then(response => {
+        this.setState({
+          firstName: response.data.user.firstName,
+          lastName: response.data.user.lastName,
+          email: response.data.user.email,
+          phone: response.data.user.phone,
+          city: response.data.user.city,
+          state: response.data.user.state,
+          picture: response.data.user.picture,
+          link1: response.data.user.link1,
+          link2: response.data.user.link2,
+          link3: response.data.user.link3,
+          skillset: response.data.user.skillset
         })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   handleChange = e => {
     const name = e.target.name;
@@ -50,25 +47,25 @@ class EditForm extends Component {
 
   submit = e => {
     e.preventDefault();
-    const obj = { 
-      firstName: this.state.firstName, 
-      lastName: this.state.lastName, 
-      email: this.state.email, 
-      phone: this.state.phone, 
-      city: this.state.city, 
-      state: this.state.state, 
-      picture: this.state.picture, 
-      link1: this.state.link1, 
-      link2: this.state.link2, 
-      link3: this.state.link3, 
+    const obj = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      phone: this.state.phone,
+      city: this.state.city,
+      state: this.state.state,
+      picture: this.state.picture,
+      link1: this.state.link1,
+      link2: this.state.link2,
+      link3: this.state.link3,
       skillset: this.state.skillset
-     };
+    };
 
     axios.post('/edit/' + this.props.match.params.email, obj)
-            .then(res => {
-                console.log(res.data)
-                this.props.history.push('/');
-            });
+      .then(res => {
+        console.log(res.data)
+        this.props.history.push('/');
+      });
 
     // axios({
     //   url: '/edit',
@@ -104,6 +101,16 @@ class EditForm extends Component {
     //   })
     //   .catch(() => alert('Failed uploading data'))
   };
+
+  delete = e => {
+    e.preventDefault();
+
+    axios.post('/delete/' + this.props.match.params.email)
+      .then(res => {
+        this.props.history.push('/');
+      });
+  };
+
   render() {
     return (
       <form className="form noValidate" autoComplete="off" onSubmit={this.submit}>
@@ -197,6 +204,7 @@ class EditForm extends Component {
         />
 
         <Button variant="contained" color="primary" onClick={this.submit}> Submit </Button>
+        <Button variant="contained" color="secondary" onClick={this.delete}> Delete </Button>
 
       </form>
     );
