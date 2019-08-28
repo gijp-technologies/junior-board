@@ -15,17 +15,12 @@ class DisplayUser extends Component {
             <div className="users">
                 {!isEmpty(users) ? <div>
                     {users.map(({ name, position, company }, key) => (
-                        <Card style={{ width: '28rem' }}>
-                            <Card.Body>
-                                <row>
-                                    <Card.Title className="card-info" as="h4">{name ? name : 'No Name Found'} </Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{company ? company : 'No Company Found'}</Card.Subtitle>
-                                    <Card.Text className="card-info">
-                                        <p>{position ? position : 'No Position Found'}</p>
-                                    </Card.Text>
-                                </row>
-                            </Card.Body>
-                        </Card>
+                        <div>
+                            <h2>{name ? name : 'No Name Found'}</h2>
+                            <h3>{company ? company : 'No Company Found'}</h3>
+                            <p>{position ? position : 'No Position Found'}</p>
+                            <br/>
+                        </div>
                     ))}
                 </div> : null}
             </div>
