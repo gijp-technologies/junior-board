@@ -141,7 +141,7 @@ class Form extends Component {
           id="standard-dense"
           value={this.state.link3}
           label="Portfolio Url"
-          name="linkk3"
+          name="link3"
           onChange={this.handleChange}
         />
 
