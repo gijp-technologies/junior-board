@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import "./Style.css";
 
-class Navbar extends Component {
+class Nav extends Component {
     render() {
         return (
             <Navbar className="nav" backgroundColor="transparent">
@@ -18,4 +18,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default Nav;
