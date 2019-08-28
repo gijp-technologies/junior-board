@@ -24,17 +24,17 @@ class EditForm extends Component {
           console.log(response.data);
           console.log(response.data.user);
             this.setState({
-                firstName: response.data.data.user.firstName,
-                lastName: response.data.data.user.lastName,
-                email: response.data.data.user.email,
-                phone: response.data.data.user.phone,
-                city: response.data.data.user.city,
-                state: response.data.data.user.state,
-                picture: response.data.data.user.picture,
-                link1: response.data.data.user.link1,
-                link2: response.data.data.user.link2,
-                link3: response.data.data.user.link3,
-                skillset: response.data.data.user.skillset
+                firstName: response.data.user.firstName,
+                lastName: response.data.user.lastName,
+                email: response.data.user.email,
+                phone: response.data.user.phone,
+                city: response.data.user.city,
+                state: response.data.user.state,
+                picture: response.data.user.picture,
+                link1: response.data.user.link1,
+                link2: response.data.user.link2,
+                link3: response.data.user.link3,
+                skillset: response.data.user.skillset
             })
         })
         .catch(function (error) {
