@@ -44,7 +44,7 @@ class App extends Component {
             {/* Jumbotron here */}
 
             <Route path="/" exact component={DisplayUsers} />
-            <Route path="/edit/:id" component={Form} />
+            <Route path="/create" component={Form} />
 
             {/* Footer here */}
           </div>

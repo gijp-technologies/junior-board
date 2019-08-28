@@ -35,7 +35,7 @@ class DisplayUser extends Component {
                 {!isEmpty(users) ? <div>
                     {users.map(({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }, key) => (
                         <div>
-                            <img source={picture ? picture : ''} alt={firstName ? firstName : '<No First Name Given>'}></img>
+                            <img src={picture ? picture : ''} alt={firstName ? firstName : '<No First Name Given>'}></img>
                             <h2>{firstName ? firstName : '<No First Name Given>'} {lastName ? lastName : '<No Last Name Given>'}</h2>
                             <h3>{email ? email : 'No Email Given'}</h3>
                             <h3>{phone ? phone : 'No Phone Number Given'}</h3>
