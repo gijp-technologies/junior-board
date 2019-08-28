@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TextField, Button } from '@material-ui/core';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class EditForm extends Component {
   state = {
@@ -63,8 +64,8 @@ class EditForm extends Component {
 
     axios.post('/edit/' + this.props.match.params.email, obj)
       .then(res => {
-        console.log(res.data)
-        this.props.history.push('/');
+        console.log(res.data);
+        <Redirect to='/' />;
       });
 
     // axios({
@@ -105,9 +106,9 @@ class EditForm extends Component {
   delete = e => {
     e.preventDefault();
 
-    axios.post('/delete/' + this.props.match.params.email)
+    axios.delete('/delete/' + this.props.match.params.email)
       .then(res => {
-        this.props.history.push('/');
+        <Redirect to='/' />;
       });
   };
 
