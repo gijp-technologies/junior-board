@@ -48,25 +48,41 @@ class EditForm extends Component {
 
   submit = e => {
     e.preventDefault();
-    const obj = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      phone: this.state.phone,
-      city: this.state.city,
-      state: this.state.state,
-      picture: this.state.picture,
-      link1: this.state.link1,
-      link2: this.state.link2,
-      link3: this.state.link3,
-      skillset: this.state.skillset
-    };
-
-    axios.post('/edit/' + this.props.match.params.email, obj)
-      .then(res => {
-        console.log(res.data);
+    const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = this.state;
+    axios({
+      url: '/edit' + this.props.match.params.email,
+      method: 'PUT',
+      data: {
+        firstName,
+        lastName,
+        email,
+        phone,
+        city,
+        state,
+        picture,
+        link1,
+        link2,
+        link3,
+        skillset
+      }
+    })
+      .then(() => {
+        this.setState({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          city: '',
+          state: '',
+          picture: '',
+          link1: '',
+          link2: '',
+          link3: '',
+          skillset: ''
+        });
         return this.props.history.push("/");
-      });
+      })
+      .catch(() => alert('Failed uploading data'))
   };
 
   delete = e => {
@@ -76,6 +92,7 @@ class EditForm extends Component {
       .then(res => {
         return this.props.history.push("/");
       });
+    return this.props.history.push("/");
   };
 
   render() {

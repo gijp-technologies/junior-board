@@ -89,7 +89,43 @@ router.get('/edit/:email', async (req, res) => {
 });
 
 // Update One
+router.put('/edit/:email', async (req, res) => {
+    if (isEmpty(req.body)) {
+        return res.status(403).json({
+            message: 'Body should not be empty',
+            statusCode: 403
+        });
+    }
 
+    const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
+
+    try {
+        const user = await User.update({
+            email: req.params.email,
+            $set: {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                phone: phone,
+                city: city,
+                state: state,
+                picture: picture,
+                link1: link1,
+                link2: link2,
+                link3: link3,
+                skillset: skillset
+            }
+        });
+
+        return res.json({
+            user
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+});
 
 
 // Delete One
@@ -103,7 +139,7 @@ router.delete('/delete/:email', async (req, res) => {
         console.log(user);
 
         return console.log("User deleted!");
-        
+
     } catch (error) {
         return res.status(500).json({
             message: 'Internal Server error'
@@ -111,28 +147,5 @@ router.delete('/delete/:email', async (req, res) => {
     }
 
 });
-
-
-// todoRoutes.route('/update/:id').post(function (req, res) {
-//     Todo.findById(req.params.id, function (err, todo) {
-//         if (!todo) {
-//             res.status(400).send('Data was not found!');
-//         } else {
-//             todo.todo_description = req.body.todo_description;
-//             todo.todo_responsibility = req.body.todo_responsibility;
-//             todo.todo_priority = req.body.todo_priority;
-//             todo.todo_completed = req.body.todo_completed;
-
-//             todo.save().then(todo => {
-//                 res.json('Todo has been updated!');
-//             })
-//             .catch(err => {
-//                 res.status(400).send("There was an error updating.");
-//             });
-//         }
-//     });
-// });
-
-
 
 module.exports = router;
