@@ -23,11 +23,11 @@ class Form extends Component {
     this.setState({ [name]: value });
   };
 
-  addUser = ({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }) => {
-    this.setState({
-      users: [...this.state.users, { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }]
-    });
-  };
+  // addUser = ({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }) => {
+  //   this.setState({
+  //     users: [...this.state.users, { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }]
+  //   });
+  // };
 
   submit = e => {
     e.preventDefault();
@@ -49,8 +49,7 @@ class Form extends Component {
         skillset
       }
     })
-      .then((response) => {
-        this.addUser(response.data);
+      .then(() => {
         this.setState({
           firstName: '',
           lastName: '',
