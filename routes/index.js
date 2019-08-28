@@ -3,7 +3,6 @@ const { isEmpty } = require('lodash');
 const User = require('../models/user');
 const router = express.Router();
 
-// Add User
 router.post('/add', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
@@ -11,37 +10,22 @@ router.post('/add', async (req, res) => {
             statusCode: 403
         });
     }
-    const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
+    const { name, position, company } = req.body;
 
     const newUser = new User({
-        firstName,
-        lastName,
-        email,
-        phone,
-        city,
-        state,
-        picture,
-        link1,
-        link2,
-        link3,
-        skillset
+        position,
+        name,
+        company,
+        date: Date.now()
     });
     try {
         await newUser.save();
         res.json({
             message: 'Data successfully saved',
             statusCode: 200,
-            firstName,
-            lastName,
-            email,
-            phone,
-            city,
-            state,
-            picture,
-            link1,
-            link2,
-            link3,
-            skillset
+            name,
+            position,
+            company
         });
     } catch (error) {
         console.log('Error: ', error);
@@ -53,7 +37,6 @@ router.post('/add', async (req, res) => {
 });
 
 
-// Get All Users
 router.get('/users', async (req, res) => {
 
     try {
@@ -67,7 +50,7 @@ router.get('/users', async (req, res) => {
             message: 'Internal Server error'
         });
     }
-
+       
 });
 
 module.exports = router;
