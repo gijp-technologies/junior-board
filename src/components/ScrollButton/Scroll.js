@@ -5,7 +5,7 @@ export default class ScrollIndex extends React.Component {
     render() {
         return (
             <div>
-                <ScrollUpButton />
+                <ScrollUpButton style={{width: 30}} ToggledStyle={{right: 20}}/>
             </div>
         );
     }
