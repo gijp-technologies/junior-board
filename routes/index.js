@@ -10,22 +10,37 @@ router.post('/add', async (req, res) => {
             statusCode: 403
         });
     }
-    const { name, position, company } = req.body;
+    const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
 
     const newUser = new User({
-        position,
-        name,
-        company,
-        date: Date.now()
+        firstName,
+        lastName,
+        email,
+        phone,
+        city,
+        state,
+        picture,
+        link1,
+        link2,
+        link3,
+        skillset
     });
     try {
         await newUser.save();
         res.json({
             message: 'Data successfully saved',
             statusCode: 200,
-            name,
-            position,
-            company
+            firstName,
+            lastName,
+            email,
+            phone,
+            city,
+            state,
+            picture,
+            link1,
+            link2,
+            link3,
+            skillset
         });
     } catch (error) {
         console.log('Error: ', error);
@@ -50,7 +65,7 @@ router.get('/users', async (req, res) => {
             message: 'Internal Server error'
         });
     }
-       
+
 });
 
 module.exports = router;

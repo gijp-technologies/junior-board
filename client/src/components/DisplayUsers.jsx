@@ -15,24 +15,18 @@ class DisplayUser extends Component {
         return (
             <div className="users">
                 {!isEmpty(users) ? <div>
-                    {users.map(({ name, position, company }, key) => (
+                    {users.map(({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }, key) => (
                         <div>
-                            {/* <h2>{name ? name : 'No Name Found'}</h2>
-                            <h3>{company ? company : 'No Company Found'}</h3>
-                            <p>{position ? position : 'No Position Found'}</p>
-                            <br/> */}
-
-                            <Card style={{ width: '28rem' }}>
-                                <Card.Body>
-                                    <row>
-                                        <Card.Title className="card-info" as="h4">{name}</Card.Title>
-                                        <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{company}</Card.Subtitle>
-                                        <Card.Text className="card-info">
-                                            Position: {position}
-                                        </Card.Text>
-                                    </row>
-                                </Card.Body>
-                            </Card>
+                            <img source={picture ? picture : ''} alt={firstName ? firstName : '<No First Name Given>'}></img>
+                            <h2>{firstName ? firstName : '<No First Name Given>'} {lastName ? lastName : '<No Last Name Given>'}</h2>
+                            <h3>{email ? email : 'No Email Given'}</h3>
+                            <h3>{phone ? phone : 'No Phone Number Given'}</h3>
+                            <h4>{city ? city : 'No City Given'}, {state ? state : 'No State Given'}</h4>
+                            <a href={link1 ? link1 : ''} target="_blank">LinkedIn</a>
+                            <a href={link2 ? link2 : ''} target="_blank">Github</a>
+                            <a href={link3 ? link3 : ''} target="_blank">Portfolio</a>
+                            <br/>
+                            <p>{skillset ? skillset : 'No skillset description given.'}</p>
                         </div>
                     ))}
                 </div> : null}
