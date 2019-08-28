@@ -12,7 +12,7 @@ class Header extends Component {
         return (
             <div className="container-fluid">
             <div className="header">
-                <img className="background-image" alt="" src={background} />
+                <img className="background-image" alt="" src={background} />  
                 <Nav />
                 <Description />
             </div>

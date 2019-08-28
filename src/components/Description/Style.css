@@ -1,6 +1,23 @@
-.description-area{
-    margin-top: 70px;
-    margin-left: 80px;
+
+.description-heading {
+    position: absolute;
+    width: 570px;
+    height: 160px;
+    margin-top: 50px;
+    margin-left: 100px;
     z-index: 3;
-    width: 600px;
+    line-break: strict;
+}
+.description-wrapper {
+    height: 421px;
+    margin: 6px;
+    padding: 21px 70px 0px 70px;
+}
+.description{
+    margin-block-start: 180px;
+    margin-left: 30px !important;    
+    position: absolute;
+    width: 560px;
+
+
 }
