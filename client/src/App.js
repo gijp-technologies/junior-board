@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+
+// Import Components
+
 
 class App extends Component {
   state = {
@@ -33,8 +37,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form addUser={this.addUser}/>
-        < DisplayUsers users={this.state.users} />
+
+        <Router>
+          <div className="container">
+            {/* Navbar here */}
+
+            <Route path='/' exact render={(props) => <DisplayUsers {...props} {...this.state.users} />} />
+            <Route path='/create' render={(props) => <Form {...props} {...this.addUser} />} />
+
+          </div>
+        </Router>
 
       </div>
     );
