@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Form from './components/Form';
-import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
@@ -43,9 +41,12 @@ class App extends Component {
           <div className="container">
             {/* Navbar here */}
 
+            {/* Jumbotron here */}
+
             <Route path="/" exact component={DisplayUsers} />
             <Route path="/edit/:id" component={Form} />
 
+            {/* Footer here */}
           </div>
         </Router>
 
