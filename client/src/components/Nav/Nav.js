@@ -7,7 +7,7 @@ class Nav extends Component {
         return (
 
             <Navbar className="nav" backgroundColor="transparent">
-                <Navbar.Brand href="#home"><img id="nav-logo" alt="Jr Board" src={require('../../Images/juniorboardlogo.png')}></img></Navbar.Brand>
+                <Navbar.Brand href="#home"><img id="nav-logo" alt="Jr Board" src={require('../../images/LogoNav.png')}></img></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                          <Button variant="outline-light" className="google-login nav-btn" href="#login">Login</Button>
