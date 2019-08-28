@@ -8,8 +8,26 @@ const { isEmpty } = require('lodash');
 
 
 class DisplayUser extends Component {
+
+    state = {
+        users: []
+    }
+
+    componentDidMount = () => {
+        this.fetchUsers();
+    };
+
+    fetchUsers = () => {
+        axios.get('/users')
+            .then((response) => {
+                const { users } = response.data;
+                this.setState({ users: [...this.state.users, ...users] })
+            })
+            .catch(() => alert('Error fetching new users'));
+    };
+
     render() {
-        const allUsers = this.props.users;
+        const allUsers = this.state.users;
         const users = !isEmpty(allUsers) ? allUsers : [];
 
         return (
@@ -25,7 +43,7 @@ class DisplayUser extends Component {
                             <a href={link1 ? link1 : ''} target="_blank">LinkedIn</a>
                             <a href={link2 ? link2 : ''} target="_blank">Github</a>
                             <a href={link3 ? link3 : ''} target="_blank">Portfolio</a>
-                            <br/>
+                            <br />
                             <p>{skillset ? skillset : 'No skillset description given.'}</p>
                         </div>
                     ))}

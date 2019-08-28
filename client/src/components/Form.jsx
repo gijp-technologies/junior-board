@@ -23,6 +23,12 @@ class Form extends Component {
     this.setState({ [name]: value });
   };
 
+  addUser = ({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }) => {
+    this.setState({
+      users: [...this.state.users, { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }]
+    });
+  };
+
   submit = e => {
     e.preventDefault();
     const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = this.state;
@@ -44,7 +50,7 @@ class Form extends Component {
       }
     })
       .then((response) => {
-        this.props.addUser(response.data);
+        this.addUser(response.data);
         this.setState({
           firstName: '',
           lastName: '',
