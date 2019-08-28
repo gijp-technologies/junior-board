@@ -6,11 +6,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import pages
 import DisplayUsers from './pages/DisplayUsers';
-import Form from './pages/Form'
-import EditForm from './pages/EditForm'
+import Form from './pages/Form';
+import EditForm from './pages/EditForm';
 
 // Import components
-
+import Navbar from './components/Navbar';
 
 class App extends Component {
   state = {
@@ -23,7 +23,7 @@ class App extends Component {
 
         <Router>
           <div className="container">
-            {/* Navbar here */}
+            <Navbar />
 
             {/* Jumbotron here */}
 
