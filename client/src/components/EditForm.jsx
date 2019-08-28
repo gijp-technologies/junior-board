@@ -50,7 +50,7 @@ class EditForm extends Component {
     e.preventDefault();
     const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = this.state;
     axios({
-      url: '/edit' + this.props.match.params.email,
+      url: '/edit/' + this.props.match.params.email,
       method: 'PUT',
       data: {
         firstName,
