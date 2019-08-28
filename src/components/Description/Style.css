@@ -11,13 +11,10 @@
 .description-wrapper {
     height: 421px;
     margin: 6px;
-    padding: 21px 70px 0px 70px;
+    padding: 41px 70px 0px 70px;
 }
 .description{
     margin-block-start: 180px;
-    margin-left: 30px !important;    
     position: absolute;
     width: 560px;
-
-
 }
