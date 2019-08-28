@@ -3,7 +3,7 @@ import { Form, Col, Button, Row } from "react-bootstrap";
 import "./Style.css";
 import Footer from '../components/Footer/Footer'
 import Nav from '../components/Navbar/Nav'
-import axios from 'axios';
+// import axios from 'axios';
 
 class JuniorForm extends Component {
     state = {
