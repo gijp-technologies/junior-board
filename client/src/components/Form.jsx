@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TextField, Button } from '@material-ui/core';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 class Form extends Component {
   state = {
@@ -58,7 +58,7 @@ class Form extends Component {
           link3: '',
           skillset: ''
         });
-        return <Redirect to='/' />;
+        return this.props.history.push("/home");
       })
       .catch(() => alert('Failed uploading data'))
   };

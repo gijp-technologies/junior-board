@@ -65,7 +65,7 @@ class EditForm extends Component {
     axios.post('/edit/' + this.props.match.params.email, obj)
       .then(res => {
         console.log(res.data);
-        return <Redirect to='/' />;
+        return this.props.history.push("/home");
       });
   };
 
@@ -74,7 +74,7 @@ class EditForm extends Component {
 
     axios.delete('/delete/' + this.props.match.params.email)
       .then(res => {
-        return <Redirect to='/' />;
+        return this.props.history.push("/home");
       });
   };
 
