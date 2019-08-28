@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(45, 46, 46);
+    color: white;
+    height: 150px;
+    margin-top: 50px;
+}
+.footer-image{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+.footer-text{
+    margin-top: 90px;
+    margin-right: 100px;
+}
