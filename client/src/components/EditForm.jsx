@@ -65,42 +65,8 @@ class EditForm extends Component {
     axios.post('/edit/' + this.props.match.params.email, obj)
       .then(res => {
         console.log(res.data);
-        <Redirect to='/' />;
+        return <Redirect to='/' />;
       });
-
-    // axios({
-    //   url: '/edit',
-    //   method: 'POST',
-    //   data: {
-    //     firstName,
-    //     lastName,
-    //     email,
-    //     phone,
-    //     city,
-    //     state,
-    //     picture,
-    //     link1,
-    //     link2,
-    //     link3,
-    //     skillset
-    //   }
-    // })
-    //   .then(() => {
-    //     this.setState({
-    //       firstName: '',
-    //       lastName: '',
-    //       email: '',
-    //       phone: '',
-    //       city: '',
-    //       state: '',
-    //       picture: '',
-    //       link1: '',
-    //       link2: '',
-    //       link3: '',
-    //       skillset: ''
-    //     });
-    //   })
-    //   .catch(() => alert('Failed uploading data'))
   };
 
   delete = e => {
@@ -108,7 +74,7 @@ class EditForm extends Component {
 
     axios.delete('/delete/' + this.props.match.params.email)
       .then(res => {
-        <Redirect to='/' />;
+        return <Redirect to='/' />;
       });
   };
 
