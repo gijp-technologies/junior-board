@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer>
-            <div>
-                Jr Board
+            <div className="footer">
+                Junior Board 2019
             </div>
         </footer>
     )
