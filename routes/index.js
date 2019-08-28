@@ -74,7 +74,7 @@ router.get('/edit/:email', async (req, res) => {
 
     try {
         const user = await User.findOne({
-            email: email
+            email: req.params.email
         });
 
         return res.json({
