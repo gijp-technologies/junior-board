@@ -46,7 +46,7 @@ class App extends Component {
 
             <Route path="/" exact component={DisplayUsers} />
             <Route path="/create" component={Form} />
-            <Route path="/edit/:email" component={EditForm} />
+            <Route path="/update/:email" component={EditForm} />
             <Route path="/delete/:email" component={Form} />
 
             {/* Footer here */}
