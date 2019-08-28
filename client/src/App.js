@@ -5,20 +5,11 @@ import axios from 'axios';
 import './App.css';
 class App extends Component {
   state = {
-    users: [],
-    user: {}
+    users: []
   }
 
   componentDidMount = () => {
-    // this.fetchUsers();
-
-    axios.get('/users')
-      .then(response => {
-        this.setState({ users: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    this.fetchUsers();
   };
 
   fetchUsers = () => {
@@ -31,16 +22,16 @@ class App extends Component {
   };
 
 
-  addUser = ({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }) => {
+  addUser = ({ name, position, company }) => {
     this.setState({
-      user: { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }
+      users: [...this.state.users, { name, position, company }]
     });
   };
 
   render() {
     return (
       <div className="App">
-        <Form addUser={this.addUser} />
+        <Form addUser={this.addUser}/>
         < DisplayUsers users={this.state.users} />
 
       </div>

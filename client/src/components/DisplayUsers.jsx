@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Card from "react-bootstrap/Card";
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 
 const { isEmpty } = require('lodash');
@@ -11,31 +10,22 @@ class DisplayUser extends Component {
         const allUsers = this.props.users;
         const users = !isEmpty(allUsers) ? allUsers : [];
 
-        console.log("This is the users props value below.");
-        console.log(this.props.users);
-
-        console.log("This is the allUsers const value below.");
-        console.log(allUsers);
-
-        console.log("This is the users const value below.");
-        console.log(users);
-
         return (
             <div className="users">
                 {!isEmpty(users) ? <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>First Name</TableCell>
-                            <TableCell align="right">Last Name</TableCell>
-                            <TableCell align="right">Email</TableCell>
+                            <TableCell>Name</TableCell>
+                            <TableCell align="right">Company</TableCell>
+                            <TableCell align="right">Position</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {users.map(({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }, key) => (
+                        {users.map(({ name, position, company }, key) => (
                             <TableRow key={key}>
-                                <TableCell component="th" scope="row"> {firstName ? firstName : 'No First Name Found'} </TableCell>
-                                <TableCell align="right">{lastName ? lastName : 'No Last Name Found'}</TableCell>
-                                <TableCell align="right">{email ? email : 'No Email Found'}</TableCell>
+                                <TableCell component="th" scope="row"> {name ? name : 'No Name Found'} </TableCell>
+                                <TableCell align="right">{company ? company : 'No Company Found'}</TableCell>
+                                <TableCell align="right">{position ? position : 'No Position Found'}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

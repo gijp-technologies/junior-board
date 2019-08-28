@@ -4,17 +4,9 @@ import axios from 'axios';
 
 class Form extends Component {
   state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    city: '',
-    state: '',
-    picture: '',
-    link1: '',
-    link2: '',
-    link3: '',
-    skillset: ''
+    name: '',
+    position: '',
+    company: ''
   };
 
   handleChange = e => {
@@ -25,38 +17,22 @@ class Form extends Component {
 
   submit = e => {
     e.preventDefault();
-    const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = this.state;
+    const { name, position, company } = this.state;
     axios({
       url: '/add',
       method: 'POST',
       data: {
-        firstName,
-        lastName,
-        email,
-        phone,
-        city,
-        state,
-        picture,
-        link1,
-        link2,
-        link3,
-        skillset
+        name,
+        position,
+        company
       }
     })
       .then((response) => {
         this.props.addUser(response.data);
         this.setState({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          city: '',
-          state: '',
-          picture: '',
-          link1: '',
-          link2: '',
-          link3: '',
-          skillset: ''
+          name: '',
+          company: '',
+          position: ''
         });
       })
       .catch(() => alert('Failed uploading data'))
@@ -64,93 +40,29 @@ class Form extends Component {
   render() {
     return (
       <form className="form noValidate" autoComplete="off" onSubmit={this.submit}>
-        <h2>Fill in your info card.</h2>
+        <h2>Please, Tell us about you</h2>
         <TextField
           id="standard-dense"
-          value={this.state.firstName}
-          label="First Name"
-          name="firstName"
+          value={this.state.name}
+          label="Name"
+          name="name"
           onChange={this.handleChange}
         />
 
         <TextField
+          name="company"
+          value={this.state.company}
           id="standard-dense"
-          value={this.state.lastName}
-          label="Lasr Name"
-          name="lastName"
           onChange={this.handleChange}
+          label="Company"
         />
 
         <TextField
+          name="position"
+          value={this.state.position}
           id="standard-dense"
-          value={this.state.email}
-          label="Email"
-          name="email"
           onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.phone}
-          label="Phone Number"
-          name="phone"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.city}
-          label="City"
-          name="city"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.state}
-          label="State"
-          name="state"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.picture}
-          label="Picture Url"
-          name="picture"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.link1}
-          label="LinkedIn Url"
-          name="link1"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.link2}
-          label="Github Url"
-          name="link2"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.link3}
-          label="Portfolio Url"
-          name="link3"
-          onChange={this.handleChange}
-        />
-
-        <TextField
-          id="standard-dense"
-          value={this.state.skillset}
-          label="Brief Skillset Description"
-          name="skillset"
-          onChange={this.handleChange}
+          label="Position"
         />
 
         <Button variant="contained" color="primary" onClick={this.submit}> Submit </Button>
