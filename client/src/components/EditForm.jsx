@@ -20,6 +20,7 @@ class EditForm extends Component {
   componentDidMount() {
     axios.get('/edit/' + this.props.match.params.email)
         .then(response => {
+          console.log(response);
             this.setState({
                 firstName: response.data.firstName,
                 lastName: response.data.lastName,
