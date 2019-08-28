@@ -90,15 +90,6 @@ router.get('/edit/:email', async (req, res) => {
 
 // Update One
 router.put('/edit/:email', async (req, res) => {
-    // if (isEmpty(req.body)) {
-    //     return res.status(403).json({
-    //         message: 'Body should not be empty',
-    //         statusCode: 403
-    //     });
-    // }
-    console.log(req.body);
-    console.log(req.data);
-
     const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
 
     try {
