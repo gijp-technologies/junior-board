@@ -7,10 +7,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Import Components
 import DisplayUsers from './components/DisplayUsers';
 import Form from './components/Form'
+import EditForm from './components/EditForm'
 
 class App extends Component {
   state = {
-    users: []
+    user: ''
   }
 
   // componentDidMount = () => {
@@ -45,6 +46,8 @@ class App extends Component {
 
             <Route path="/" exact component={DisplayUsers} />
             <Route path="/create" component={Form} />
+            <Route path="/edit/:email" component={EditForm} />
+            <Route path="/delete/:email" component={Form} />
 
             {/* Footer here */}
           </div>
