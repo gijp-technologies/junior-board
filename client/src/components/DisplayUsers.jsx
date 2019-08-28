@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
+import Card from "react-bootstrap/Card";
 
 const { isEmpty } = require('lodash');
 
@@ -12,24 +13,21 @@ class DisplayUser extends Component {
 
         return (
             <div className="users">
-                {!isEmpty(users) ? <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Name</TableCell>
-                            <TableCell align="right">Company</TableCell>
-                            <TableCell align="right">Position</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {users.map(({ name, position, company }, key) => (
-                            <TableRow key={key}>
-                                <TableCell component="th" scope="row"> {name ? name : 'No Name Found'} </TableCell>
-                                <TableCell align="right">{company ? company : 'No Company Found'}</TableCell>
-                                <TableCell align="right">{position ? position : 'No Position Found'}</TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table> : null}
+                {!isEmpty(users) ? <div>
+                    {users.map(({ name, position, company }, key) => (
+                        <Card style={{ width: '28rem' }}>
+                            <Card.Body>
+                                <row>
+                                    <Card.Title className="card-info" as="h4">{name ? name : 'No Name Found'} </Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{company ? company : 'No Company Found'}</Card.Subtitle>
+                                    <Card.Text className="card-info">
+                                        <p>{position ? position : 'No Position Found'}</p>
+                                    </Card.Text>
+                                </row>
+                            </Card.Body>
+                        </Card>
+                    ))}
+                </div> : null}
             </div>
         );
     }
