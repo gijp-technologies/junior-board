@@ -42,7 +42,7 @@ class App extends Component {
           <div className="container">
             {/* Navbar here */}
 
-            <Route path='/' exact render={(props) => <DisplayUsers {...props} {...this.state.users} />} />
+            <Route path='/' render={(props) => <DisplayUsers {...props} {...this.state.users} />} />
             <Route path='/create' render={(props) => <Form {...props} {...this.addUser} />} />
 
           </div>
