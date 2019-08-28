@@ -22,7 +22,7 @@ class EditForm extends Component {
         .then(response => {
           console.log(response);
           console.log(response.data);
-          console.log(response.data.data);
+          console.log(response.data.user);
             this.setState({
                 firstName: response.data.data.user.firstName,
                 lastName: response.data.data.user.lastName,
