@@ -94,25 +94,25 @@ router.get('/edit/:email', async (req, res) => {
 
 
 
-todoRoutes.route('/update/:id').post(function (req, res) {
-    Todo.findById(req.params.id, function (err, todo) {
-        if (!todo) {
-            res.status(400).send('Data was not found!');
-        } else {
-            todo.todo_description = req.body.todo_description;
-            todo.todo_responsibility = req.body.todo_responsibility;
-            todo.todo_priority = req.body.todo_priority;
-            todo.todo_completed = req.body.todo_completed;
+// todoRoutes.route('/update/:id').post(function (req, res) {
+//     Todo.findById(req.params.id, function (err, todo) {
+//         if (!todo) {
+//             res.status(400).send('Data was not found!');
+//         } else {
+//             todo.todo_description = req.body.todo_description;
+//             todo.todo_responsibility = req.body.todo_responsibility;
+//             todo.todo_priority = req.body.todo_priority;
+//             todo.todo_completed = req.body.todo_completed;
 
-            todo.save().then(todo => {
-                res.json('Todo has been updated!');
-            })
-            .catch(err => {
-                res.status(400).send("There was an error updating.");
-            });
-        }
-    });
-});
+//             todo.save().then(todo => {
+//                 res.json('Todo has been updated!');
+//             })
+//             .catch(err => {
+//                 res.status(400).send("There was an error updating.");
+//             });
+//         }
+//     });
+// });
 
 
 
