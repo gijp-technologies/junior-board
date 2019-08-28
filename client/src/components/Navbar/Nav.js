@@ -5,8 +5,8 @@ import "./Style.css";
 class Nav extends Component {
     render() {
         return (
-            <h1>This is the navbar Component</h1>
             <Navbar className="nav" backgroundColor="transparent">
+                <h1>This is the navbar Component</h1>
                 {/* <Navbar.Brand href="#home"><img id="nav-logo" alt="Jr Board" src={require('../../images/LogoNav.png')}></img></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
