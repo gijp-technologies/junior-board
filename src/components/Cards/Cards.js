@@ -17,31 +17,35 @@ class Juniors extends Component {
         return (
             <div>
                 {JuniorsDevs.map((dev, key) =>
-                    <Card style={{ width: '28rem' }}>
-                        <Card.Body>
-                            <row>
-                                {/* IMAGE GOES HERE: */}
+                    <div className="junior-card" style={{ width: '27rem' }}>
+                        <row>
+                            {/* IMAGE GOES HERE: */}
+                            <div className="card-background">
                                 <div className="image-placeholder"><img src={dev.picture} alt={dev.firstName}></img></div>
-                                <Card.Title className="card-info" as="h4">{dev.firstName + " " + dev.lastName}</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{dev.city + ", " + dev.state}</Card.Subtitle>
-                                <Card.Text className="card-info">
-                                    Phone: {" " + dev.phone} 
-                                    <br/>
-                                    Email: {" " + dev.email}
-                                </Card.Text>
-                            </row>
+                                <div className="card-info" >
+                                    <h4 className="junior-name">{dev.firstName + " " + dev.lastName}</h4>
+                                    <h5 className="junior-location">{dev.city + ", " + dev.state}</h5>
+                                    <p>
+                                        Phone: {" " + dev.phone}
+                                        <br />
+                                        Email: {" " + dev.email}
+                                    </p>
+                                </div>
+                            </div>
+                        </row>
+                        <div className="bottom-section">
                             <row>
-                                <Card.Text className="skillset">
-                                    Skills: {" " + dev.skillset}
-                                </Card.Text>
+                                <p className="skillset">
+                                    <h6>Skills:</h6> {" " + dev.skillset}
+                                </p>
                                 <div className="card-footer">
-                                    <Card.Link href={dev.link1} className={dev.link1 ? '' : 'emptyLink'} target="blank">Portfolio</Card.Link>
-                                    <Card.Link href={dev.link2} className={dev.link2 ? '' : 'emptyLink'} target="blank">LinkedIn</Card.Link>
-                                    <Card.Link href={dev.link3} className={dev.link3 ? '' : 'emptyLink'} target="blank">Github</Card.Link>
+                                    <a href={dev.link1} className={dev.link1 ? '' : 'emptyLink'} target="blank">LinkedIn</a>
+                                    <a href={dev.link2} className={dev.link2 ? '' : 'emptyLink'} target="blank">Github</a>
+                                    <a href={dev.link3} className={dev.link3 ? '' : 'emptyLink'} target="blank">Portfolio</a>
                                 </div>
                             </row>
-                        </Card.Body>
-                    </Card>
+                        </div>
+                    </div>
                 )}
             </div>
         );

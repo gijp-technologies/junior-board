@@ -6,7 +6,7 @@ class Nav extends Component {
     render() {
         return (
 
-            <Navbar>
+            <Navbar className="nav">
                 <Navbar.Brand href="#home"><img id="nav-logo" alt="Jr Board" src={require('../../Images/juniorboardlogo.png')}></img></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">

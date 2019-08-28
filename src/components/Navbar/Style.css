@@ -1,5 +1,8 @@
+.nav{
+    background: transparent;
+}
 #nav-logo{
-    width: 9%;
+    width: 20%;
     height: auto;
     margin-left: 5%; 
 }
