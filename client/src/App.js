@@ -10,7 +10,7 @@ import Form from './pages/Form';
 import EditForm from './pages/EditForm';
 
 // Import components
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Nav';
 
 class App extends Component {
   state = {
