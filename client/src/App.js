@@ -14,26 +14,6 @@ class App extends Component {
     user: ''
   }
 
-  // componentDidMount = () => {
-  //   this.fetchUsers();
-  // };
-
-  // fetchUsers = () => {
-  //   axios.get('/users')
-  //     .then((response) => {
-  //       const { users } = response.data;
-  //       this.setState({ users: [...this.state.users, ...users] })
-  //     })
-  //     .catch(() => alert('Error fetching new users'));
-  // };
-
-
-  // addUser = ({ firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }) => {
-  //   this.setState({
-  //     users: [...this.state.users, { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset }]
-  //   });
-  // };
-
   render() {
     return (
       <div className="App">
