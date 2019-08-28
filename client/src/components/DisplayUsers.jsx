@@ -25,10 +25,10 @@ class DisplayUser extends Component {
                             <Card style={{ width: '28rem' }}>
                                 <Card.Body>
                                     <row>
-                                        <Card.Title className="card-info" as="h4">{name ? name : 'No Name Found'}</Card.Title>
-                                        <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{company ? company : 'No Company Found'}</Card.Subtitle>
+                                        <Card.Title className="card-info" as="h4">{name}</Card.Title>
+                                        <Card.Subtitle className="mb-2 text-muted card-info" as="h5">{company}</Card.Subtitle>
                                         <Card.Text className="card-info">
-                                            Position: {position ? position : 'No Position Found'}
+                                            Position: {position}
                                         </Card.Text>
                                     </row>
                                 </Card.Body>
