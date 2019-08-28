@@ -3,6 +3,8 @@ import Form from './components/Form';
 import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 class App extends Component {
   state = {
     users: []
