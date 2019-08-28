@@ -21,6 +21,8 @@ class EditForm extends Component {
     axios.get('/edit/' + this.props.match.params.email)
         .then(response => {
           console.log(response);
+          console.log(response.data);
+          console.log(response.data.data);
             this.setState({
                 firstName: response.data.data.user.firstName,
                 lastName: response.data.data.user.lastName,
