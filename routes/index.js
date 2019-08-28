@@ -96,6 +96,8 @@ router.put('/edit/:email', async (req, res) => {
             statusCode: 403
         });
     }
+    console.log(req.body);
+    console.log(req.data);
 
     const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
 
