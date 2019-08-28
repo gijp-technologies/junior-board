@@ -1,0 +1,10 @@
+.background-image{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    float: right !important;
+    justify-content: right;  
+    z-index: -5 !important;
+    top: 0 !important;
+    margin-bottom: 100px;
+}
+
