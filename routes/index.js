@@ -73,9 +73,9 @@ router.get('/users', async (req, res) => {
 router.get('/edit/:email', async (req, res) => {
 
     try {
-        const user = await User.findOne({
-            email: req.params.email
-        });
+        const user = await User.findOne(
+            { email: req.params.email }
+        );
 
         return res.json({
             user
@@ -102,22 +102,24 @@ router.put('/edit/:email', async (req, res) => {
     const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = req.body;
 
     try {
-        const user = await User.updateOne({
-            email: req.params.email,
-            $set: {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                phone: phone,
-                city: city,
-                state: state,
-                picture: picture,
-                link1: link1,
-                link2: link2,
-                link3: link3,
-                skillset: skillset
+        const user = await User.updateOne(
+            { email: req.params.email },
+            {
+                $set: {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
+                    city: city,
+                    state: state,
+                    picture: picture,
+                    link1: link1,
+                    link2: link2,
+                    link3: link3,
+                    skillset: skillset
+                }
             }
-        });
+        );
 
         return res.json({
             user
@@ -134,9 +136,9 @@ router.put('/edit/:email', async (req, res) => {
 router.delete('/delete/:email', async (req, res) => {
 
     try {
-        const user = await User.deleteOne({
-            email: req.params.email
-        });
+        const user = await User.deleteOne(
+            { email: req.params.email }
+        );
 
         console.log(user);
 
