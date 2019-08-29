@@ -19,7 +19,7 @@ const About = () => {
                     <div className='team-cards'>
                         <div className='team-card-header'>
                             <div className='image-placeholder-about'>
-                                <img alt='Ileana Mandigo' src={require('../Images/ileana.jpg')} className='ileana-pic' />
+                                <img alt='Ileana Mandigo' src={require('../Images/ileana.jpg')} className='member-pic' />
                             </div>
                             <div className="member-info">
                                 <h4>Ileana Mandigo</h4>
@@ -43,7 +43,7 @@ const About = () => {
                         <div className='team-cards'>
                             <div className='team-card-header'>
                                 <div className='image-placeholder-about'>
-                                    <img alt='Greg Baker' src={require('../Images/greg.jpg')} className='ileana-pic' />
+                                    <img alt='Greg Baker' src={require('../Images/greg.jpg')} className='member-pic' />
                                 </div>
                                 <div className="member-info">
                                     <h4 >Greg Baker</h4>

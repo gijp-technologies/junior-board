@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Style.css';
+import avatar from '../../Images/avatar.png';
 // import axios from "axios";
 const JuniorsDevs = require("../API/JuniorsDevs.json");
 
@@ -20,11 +21,11 @@ class Juniors extends Component {
                         <row>
                             {/* IMAGE GOES HERE: */}
                             <div className="card-background">
-                                <div className="image-placeholder"><img src={dev.picture} alt={dev.firstName}></img></div>
+                                <img src={dev.picture ? '' : 'default picture here', 'dev.picture'} alt={dev.firstName} className="jr-images" />
                                 <div className="card-info" >
                                     <h4 className="junior-name">{dev.firstName + " " + dev.lastName}</h4>
                                     <h5 className="junior-location">{dev.city + ", " + dev.state}</h5>
-                                    <p>
+                                    <p className="jr-ph-mail">
                                         Phone: {" " + dev.phone}
                                         <br />
                                         Email: {" " + dev.email}
