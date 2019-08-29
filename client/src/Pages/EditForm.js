@@ -166,7 +166,7 @@ class EditForm extends Component {
                     <Row>
                         <Form.Group as={Col} controlId="exampleForm.ControlTextarea1">
                             <Form.Label> Skillset </Form.Label>
-                            <Form.Control name="skillset" as="textarea" rows="4" />
+                            <Form.Control name="skillset" as="textarea" rows="4" value={this.state.link3} onChange={this.handleChange} />
                         </Form.Group>
                     </Row>
 
