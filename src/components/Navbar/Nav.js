@@ -11,7 +11,7 @@ class Nav extends Component {
                 <Navbar.Brand href="/"><img id="nav-logo" alt="Jr Board" src={require('../../Images/juniorboardlogo.png')}></img></Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                         <Button variant="outline-light" className="google-login nav-btn" href="#login">Login</Button>
+                         <Button variant="outline-light" className="google-login nav-btn" href="/form">Login</Button>
                          <Button variant="outline-light" className="nav-btn" href="/About">About</Button>
                 </Navbar.Collapse>
             </Navbar>

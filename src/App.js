@@ -5,9 +5,9 @@ import Form from "./Pages/Form";
 import About from "./Pages/About";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
-library.add( fab, faGithubSquare, faLinkedin );
+library.add( fab, faGithubSquare );
 // library.add( fab,  );
 
 function App() {
