@@ -1,19 +1,39 @@
-.Main{
+.Main {
     /* padding-left: 5%;
     padding-right: 5%; */
 }
-.form{
+.form-nav{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    float: right !important;
+    justify-content: right;  
+    z-index: -5 !important;
+    top: 0 !important;
+    margin-bottom: 100px;
+}
+.form-area {
+    background: rgb(93, 218, 241);
+    background: linear-gradient(148deg, rgba(93, 218, 241, 1) 0%, rgba(31, 204, 147, 1) 100%);
+}
+
+.form {
     padding-top: 3%;
     padding-right: 10%;
     padding-left: 10%;
     padding-bottom: 10%;
 
-}   
-.welcome-message{
+}
+
+.welcome-message {
     padding-top: 2%;
     padding-left: 10%;
     padding-bottom: 1%;
 }
-.form-instructions{
+
+.form-instructions {
     padding-left: 10%;
+}
+
+.jr-board-about {
+    width: 380px;
 }
