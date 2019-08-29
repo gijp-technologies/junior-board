@@ -3,7 +3,7 @@
     width: 570px;
     height: 160px;
     margin-top: 50px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     z-index: 3;
     line-break: strict;
 }
