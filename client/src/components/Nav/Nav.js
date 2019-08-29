@@ -3,11 +3,10 @@ import { Navbar, Button } from "react-bootstrap";
 import "./Style.css";
 
 
-
 function Nav() {
     return (
         <div>
-            <Button variant="primary">Primary</Button>
+            <button onclick="">Click me</button>
         </div>
     );
 }
