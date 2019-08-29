@@ -11,18 +11,23 @@ const About = () => {
             <img className='jr-board-about' alt='Junior Board' src={juniorboardlogo} />
             <div className='about'>
                 <div className='Greg'>
-                    <img alt="Greg Baker" src=""></img>
-                </div>
-                <div className='Ileana'>
-                    <img alt="Ileana Mandigo" src=""></img>
-                </div>
-                <div className='Priscila'>
-                    <img alt="Priscila Heller" src=""></img>
+                    <div className="picture">
+                        < img alt="Greg Baker" src="" className="Greg-photo"></img>
+                    </div>
+                    <div className="picture">
+                        <div className='Ileana'>
+
+                            <img alt="Ileana Mandigo" src=""></img>
+                        </div>
+                        <div className='Priscila'>
+                            <img alt="Priscila Heller" src=""></img>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <Footer />
         </div>
-    );
-};
+    )
+}
+
 
 export default About;
