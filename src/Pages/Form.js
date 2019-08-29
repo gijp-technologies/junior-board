@@ -81,7 +81,7 @@ class JuniorForm extends Component {
                 <img src={formAboutNav} alt="" className="form-nav" />
                 <Nav />
                 <div className="welcome-message"><h1>Welcome to Junior Board</h1></div>
-                <div className="form-instructions"><h5>Please enter the information you would like recruiters to know about you</h5></div>
+                <div className="form-instructions"><h5>Please enter the information you would like recruiters to know about you:</h5></div>
                 <form className="form">
                     <Row>
                         <Form.Group as={Col} controlId="formGridfirstName">
@@ -150,7 +150,7 @@ class JuniorForm extends Component {
                         </Form.Group>
                     </Row>
 
-                    <Button variant="primary" type="submit" onClick={this.handleFormSubmit}>
+                    <Button className="submit-btn" type="submit" onClick={this.handleFormSubmit}>
                         Submit
                 </Button>
                 </form>
