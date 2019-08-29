@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { TextField, Button } from '@material-ui/core';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
 class EditForm extends Component {
   state = {
