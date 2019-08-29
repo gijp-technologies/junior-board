@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Form, Col, Button, Row } from "react-bootstrap";
 import "./Style.css";
-import Footer from '../components/Footer/Footer'
-import Nav from '../components/Navbar/Nav'
+import Footer from '../components/Footer/Footer';
+import Nav from '../components/Navbar/Nav';
+import formAboutNav from '../Images/formAboutNav.png';
 // import axios from 'axios';
 
 class JuniorForm extends Component {
@@ -22,7 +23,7 @@ class JuniorForm extends Component {
     }
     handleInputChange = e => {
         let value = e.target.value
-        const name = e.target.name 
+        const name = e.target.name
 
         this.setState({
             [name]: value
@@ -33,7 +34,7 @@ class JuniorForm extends Component {
         console.log(e);
         // const { name, value } = this.state;
         // this is where we are posting to set network for DB update. When response comes back with new info will update existing profile and display:
-       
+
         // axios.post("url", {
         //     firstName: this.state.firstName,
         //     lastName: this.state.lastName,
@@ -48,7 +49,7 @@ class JuniorForm extends Component {
         //     skillset: this.state.skillset
         // }).then(res=>{
         //     console(res);
-        
+
         // access the response that will be in res.data
         // this.setState({
         // existingProfile:res.data
@@ -56,7 +57,7 @@ class JuniorForm extends Component {
         // }).catch(err=>{
         // if err handle err here
         // })
-        
+
         // this.setState({
         //     firstName: "",
         //     lastName: "",
@@ -76,10 +77,11 @@ class JuniorForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="form-area">
+                <img src={formAboutNav} alt="" className="form-nav" />
                 <Nav />
                 <div className="welcome-message"><h1>Welcome to Junior Board</h1></div>
-                <div className="form-instructions"><h5>Please enter the information you would like recruiters to know about you</h5></div>
+                <div className="form-instructions"><h5>Please enter the information you would like recruiters to know about you:</h5></div>
                 <form className="form">
                     <Row>
                         <Form.Group as={Col} controlId="formGridfirstName">
@@ -127,17 +129,17 @@ class JuniorForm extends Component {
                             <Form.Control type="text" name="picture" placeholder="Link to picture" value={this.state.picture} onChange={this.handleInputChange} />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridlink1">
-                            <Form.Label> Link </Form.Label>
+                            <Form.Label> Link to LinkedIn</Form.Label>
                             <Form.Control type="text" name="link1" placeholder="Portfolio, LinkedIn, github" value={this.state.link1} onChange={this.handleInputChange} />
                         </Form.Group>
                     </Row>
                     <Row>
                         <Form.Group as={Col} controlId="formGridlink1">
-                            <Form.Label> Link </Form.Label>
+                            <Form.Label> Link to Github </Form.Label>
                             <Form.Control type="text" name="link2" placeholder="Portfolio, LinkedIn, github" value={this.state.link2} onChange={this.handleInputChange} />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridlink2">
-                            <Form.Label> Link </Form.Label>
+                            <Form.Label> Link to Portfolio</Form.Label>
                             <Form.Control type="text" name="link3" placeholder="Portfolio, LinkedIn, github" value={this.state.link3} onChange={this.handleInputChange} />
                         </Form.Group>
                     </Row>
@@ -148,7 +150,7 @@ class JuniorForm extends Component {
                         </Form.Group>
                     </Row>
 
-                    <Button variant="primary" type="submit" onClick={this.handleFormSubmit}>
+                    <Button className="submit-btn" type="submit" onClick={this.handleFormSubmit}>
                         Submit
                 </Button>
                 </form>
