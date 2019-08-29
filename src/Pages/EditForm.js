@@ -6,7 +6,7 @@ import Nav from '../components/Navbar/Nav';
 import axios from 'axios';
 import { withRouter } from "react-router";
 
-class JuniorForm extends Component {
+class EditForm extends Component {
     state = {
         firstName: "",
         lastName: "",
@@ -22,6 +22,28 @@ class JuniorForm extends Component {
         skillset: ""
     }
 
+    componentDidMount() {
+        axios.get('/edit/' + this.props.match.params.email)
+            .then(response => {
+                this.setState({
+                    firstName: response.data.user.firstName,
+                    lastName: response.data.user.lastName,
+                    email: response.data.user.email,
+                    phone: response.data.user.phone,
+                    city: response.data.user.city,
+                    state: response.data.user.state,
+                    picture: response.data.user.picture,
+                    link1: response.data.user.link1,
+                    link2: response.data.user.link2,
+                    link3: response.data.user.link3,
+                    skillset: response.data.user.skillset
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     handleChange = e => {
         const name = e.target.name;
         const value = e.target.value;
@@ -32,8 +54,8 @@ class JuniorForm extends Component {
         e.preventDefault();
         const { firstName, lastName, email, phone, city, state, picture, link1, link2, link3, skillset } = this.state;
         axios({
-            url: '/add',
-            method: 'POST',
+            url: '/edit/' + this.props.match.params.email,
+            method: 'PUT',
             data: {
                 firstName,
                 lastName,
@@ -65,6 +87,16 @@ class JuniorForm extends Component {
                 return this.props.history.push("/");
             })
             .catch(() => alert('Failed uploading data'))
+    };
+
+    delete = e => {
+        e.preventDefault();
+
+        axios.delete('/delete/' + this.props.match.params.email)
+            .then(res => {
+                return this.props.history.push("/");
+            });
+        return this.props.history.push("/");
     };
 
     render() {
@@ -144,6 +176,10 @@ class JuniorForm extends Component {
                     <Button variant="primary" type="submit" onClick={this.submit}>
                         Submit
                 </Button>
+
+                    <Button variant="primary" type="submit" onClick={this.delete}>
+                        Delete
+                </Button>
                 </form>
                 <Footer />
             </div>
@@ -151,4 +187,4 @@ class JuniorForm extends Component {
     }
 }
 
-export default JuniorForm;
+export default EditForm;

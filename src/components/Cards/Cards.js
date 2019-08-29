@@ -1,21 +1,30 @@
 import React, { Component } from 'react'
 import './Style.css';
-// import axios from "axios";
-const JuniorsDevs = require("../API/JuniorsDevs.json");
+import axios from 'axios';
 
 class Juniors extends Component {
 
-    componentDidMount() {
-        this.setState({
-            existingProfile: "mock"
-
-        })
+    state = {
+        users: []
     }
+
+    componentDidMount = () => {
+        this.fetchUsers();
+    };
+
+    fetchUsers = () => {
+        axios.get('/users')
+            .then((response) => {
+                const { users } = response.data;
+                this.setState({ users: [...this.state.users, ...users] })
+            })
+            .catch(() => alert('Error fetching new users'));
+    };
 
     render() {
         return (
             <div>
-                {JuniorsDevs.map((dev, key) =>
+                {users.map((dev, key) =>
                     <div className="junior-card" style={{ width: '27rem' }}>
                         <row>
                             {/* IMAGE GOES HERE: */}
