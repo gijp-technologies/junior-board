@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import Nav from '../components/Navbar/Nav';
 import Footer from '../components/Footer/Footer';
 import juniorboardlogo from '../Images/juniorboardlogo.png';
+import formAboutNav from '../Images/formAboutNav.png';  
 import './Style.css';
 
 const About = () => {
     return (
         <div>
+            <img src={formAboutNav} alt="" className="form-nav" />
             <Nav />
             <img className='jr-board-about' alt='Junior Board' src={juniorboardlogo} />
             <div className='about'>
