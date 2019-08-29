@@ -135,7 +135,7 @@ class JuniorForm extends Component {
                     <Row>
                         <Form.Group as={Col} controlId="exampleForm.ControlTextarea1">
                             <Form.Label> Skillset </Form.Label>
-                            <Form.Control name="skillset" as="textarea" rows="4" value={this.state.skillset} onChange={this.handleChange} />
+                            <Form.Control name="skillset" as="textarea" rows="4" maxlength = "200" placeholder="Max 200 characters" value={this.state.skillset} onChange={this.handleChange} />
                         </Form.Group>
                     </Row>
 
