@@ -11,19 +11,25 @@ class Description extends Component {
         </Row>
         <Row className='description'>
           <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent. wef uhepruoshe ru hgseur guoser oesiorh
-            oiawhruoi gouiaw.
+          Welcome to Junior Board, an organized information panel for recently graduated developers. 
+          With all their information and links to different web portals in one location, it's easier to 
+          find the junior developer that is right for you!
             </p>
             <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent. wef uhepruoshe ru hgseur guoser oesiorh
-            oiawhruoi gouiaw.
+            <ul>
+              <li>Front-end Software Developers</li>
+              <li>Back-end Software Developers</li>
+              <li>Full Stack Software Developers</li>
+              <li>UI/UX Designer</li>
+              <li>Data Analist</li>
+              <li>Program Managers</li>
+              <li>DevOps Engineers</li>
+              <li>And more...</li>
+            </ul>
           </p>
         </Row>
       </div>
     );
   }
 }
-
 export default Description;

@@ -114,22 +114,22 @@ class JuniorForm extends Component {
 
                     <Row>
                         <Form.Group as={Col} controlId="formGridpicture">
-                            <Form.Label> Link to your picture </Form.Label>
-                            <Form.Control type="text" name="picture" placeholder="Link to picture" value={this.state.picture} onChange={this.handleChange} />
+                            <Form.Label> LinkedIn Picture Url </Form.Label>
+                            <Form.Control type="text" name="picture" placeholder="Link to linkedIn picture" value={this.state.picture} onChange={this.handleChange} />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridlink1">
-                            <Form.Label> Link </Form.Label>
-                            <Form.Control type="text" name="link1" placeholder="Portfolio, LinkedIn, github" value={this.state.link1} onChange={this.handleChange} />
+                            <Form.Label> Link to LinkedIn</Form.Label>
+                            <Form.Control type="text" name="link1" placeholder="LinkedIn" value={this.state.link1} onChange={this.handleChange} />
                         </Form.Group>
                     </Row>
                     <Row>
                         <Form.Group as={Col} controlId="formGridlink1">
-                            <Form.Label> Link </Form.Label>
-                            <Form.Control type="text" name="link2" placeholder="Portfolio, LinkedIn, github" value={this.state.link2} onChange={this.handleChange} />
+                            <Form.Label> Link to Github </Form.Label>
+                            <Form.Control type="text" name="link2" placeholder="Github" value={this.state.link2} onChange={this.handleChange} />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridlink2">
-                            <Form.Label> Link </Form.Label>
-                            <Form.Control type="text" name="link3" placeholder="Portfolio, LinkedIn, github" value={this.state.link3} onChange={this.handleChange} />
+                            <Form.Label> Link to Portfolio</Form.Label>
+                            <Form.Control type="text" name="link3" placeholder="Portfolio" value={this.state.link3} onChange={this.handleChange} />
                         </Form.Group>
                     </Row>
                     <Row>
