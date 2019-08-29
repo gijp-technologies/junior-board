@@ -139,7 +139,7 @@ class JuniorForm extends Component {
                         </Form.Group>
                     </Row>
 
-                    <Button variant="primary" type="submit" onClick={this.submit}>
+                    <Button className="submit-btn" variant="primary" type="submit" onClick={this.submit}>
                         Submit
                 </Button>
                 </form>
