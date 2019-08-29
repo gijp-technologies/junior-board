@@ -16,6 +16,7 @@ function App() {
         <Route exact path="/" component={Main} />
         <Route exact path="/form" component={Form} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/update/:email" component={EditForm} />
       </Router>
   );
 }
