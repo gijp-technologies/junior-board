@@ -28,8 +28,8 @@ class App extends Component {
             {/* Jumbotron here */}
 
             <Route path="/" exact component={DisplayUsers} />
-            <Route path="/create" component={Form} />
-            <Route path="/update/:email" component={EditForm} />
+            {/* <Route path="/create" component={Form} />
+            <Route path="/update/:email" component={EditForm} /> */}
 
             {/* Footer here */}
           </div>
