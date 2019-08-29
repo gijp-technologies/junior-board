@@ -126,7 +126,7 @@ class JuniorForm extends Component {
                     <Row>
                         <Form.Group as={Col} controlId="formGridpicture">
                             <Form.Label> Link to your picture </Form.Label>
-                            <Form.Control type="text" name="picture" placeholder="Link to picture" value={this.state.picture} onChange={this.handleInputChange} />
+                            <Form.Control type="text" name="picture" placeholder="Link to linkedIn picture" value={this.state.picture} onChange={this.handleInputChange} />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridlink1">
                             <Form.Label> Link to LinkedIn</Form.Label>
