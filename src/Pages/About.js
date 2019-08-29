@@ -37,7 +37,7 @@ const About = () => {
                             <h4 className="member-name">Greg Baker</h4>
                             <h6>Back-End Developer</h6>
                             <h6>Phone: 407-259-7239</h6>
-                            <h6>Semperfifcd@gmail.com</h6>
+                            <h6>semperfifcd@gmail.com</h6>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@ const About = () => {
                             <h4 className="member-name">Priscila Heller</h4>
                             <h6>Google Authentication</h6>
                             <h6>Phone: 407-259-7239</h6>
-                            <h6>Semperfifcd@gmail.com</h6>
+                            <h6>priscila.x.p.r@gmail.com</h6>
                         </div>
                     </div>
 
