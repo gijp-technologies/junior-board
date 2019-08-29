@@ -6,7 +6,6 @@ import Description from '../Description/Description';
 
 // let background=require("../../Images/background.png");
 
-
 class Header extends Component {
     render() {
         return (

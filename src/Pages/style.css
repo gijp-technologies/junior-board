@@ -47,8 +47,73 @@
     font-size: 16px !important;
 }
 
-.picture {
-    -ms-transform: rotate(20deg); /* IE 9 */
-    -webkit-transform: rotate(20deg); /* Safari prior 9.0 */
-    transform: rotate(5deg); /* Standard syntax */
-  }
+
+.about-area{
+    padding-left: 150px;
+    position: absolute;
+}
+.about-header{
+    position: absolute;
+    /* font-size: 25px; */
+    width: 570px;
+    height: 160px;
+    margin-top: 50px;
+    margin-left: 360px;
+    z-index: 3;
+    line-break: strict;
+}
+.about-header-underline{
+    margin-left: 40px;
+    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+    border-radius: 40px;
+    height: 10px;
+    width: 400px;
+    background: rgb(93, 218, 241);
+    background: linear-gradient(148deg, rgba(93, 218, 241, 1) 0%, rgba(31, 204, 147, 1) 100%);
+}
+.about-logo{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: 15px;
+    width: 200px;
+}
+
+.team-cards{
+    width: 350px;
+    height: 500px;
+    margin-top: 155px;
+    margin-left: 40px;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+    display: inline-block;
+    overflow: hidden;
+}
+
+.team-card-header{
+    padding: 20px;
+    padding-top: 30px;
+    height: 180px;
+    width: 100%;
+    background: rgb(93, 218, 241);
+    background: linear-gradient(148deg, rgba(93, 218, 241, 1) 0%, rgba(31, 204, 147, 1) 100%);
+}
+.image-placeholder-about{
+    width: 115px;
+    height: 115px;
+    border-radius: 30px;
+    border: 4px solid white;
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+    border-image-outset: 10px;
+    float: left;
+    margin-left: 6px;
+    margin-right: 15px;
+    margin-top: 1%;
+    -ms-transform: rotate(25deg); /* IE 9 */
+    -webkit-transform: rotate(25deg); /* Safari prior 9.0 */
+    transform: rotate(10deg); /* Standard syntax */
+}
+.member-name{
+    margin-top: 5px;
+}
