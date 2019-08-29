@@ -22,6 +22,8 @@ class Juniors extends Component {
     };
 
     render() {
+        const users = this.state.users;
+
         return (
             <div>
                 {users.map((dev, key) =>
