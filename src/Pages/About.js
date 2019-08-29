@@ -22,10 +22,15 @@ const About = () => {
                                 <img alt='Ileana Mandigo' src={require('../Images/ileana.jpg')} className='ileana-pic' />
                             </div>
                             <div className="member-info">
-                            <h4>Ileana Mandigo</h4>
-                            <h6>Front-End Developer</h6>
-                            <h6>Phone: 407-259-7239</h6>
-                            <h6>ilyrodriguez@gmail.com</h6>
+                                <h4>Ileana Mandigo</h4>
+                                <h6>Front-End Developer</h6>
+                                <h6>Phone: 407-259-7239</h6>
+                                <h6>ilyrodriguez@gmail.com</h6>
+                            </div>
+                            <div className="card-footer">
+                                <a href="https://www.linkedin.com/in/ileana-mandigo/" target="blank">LinkedIn</a>
+                                <a href="https://github.com/ilyrodriguez" target="blank">Github</a>
+                                <a href="" target="blank">Portfolio</a>
                             </div>
                         </div>
                     </div>
@@ -33,14 +38,19 @@ const About = () => {
                     <div className='team-cards'>
                         <div className='team-card-header'>
                             <div className='image-placeholder-about'>
-                                <img alt='Greg Baker' src={require('../Images/greg.jpg')} className='ileana-pic'/>
+                                <img alt='Greg Baker' src={require('../Images/greg.jpg')} className='ileana-pic' />
                             </div>
                             <div className="member-info">
-                            <h4 >Greg Baker</h4>
-                            <h6>Back-End Developer</h6>
-                            <h6>Phone: 407-259-7239</h6>
-                            <h6>semperfifcd@gmail.com</h6>
-                            </div> 
+                                <h4 >Greg Baker</h4>
+                                <h6>Back-End Developer</h6>
+                                <h6>Phone: 407-259-7239</h6>
+                                <h6>semperfifcd@gmail.com</h6>
+                            </div>
+                            <div className="card-footer">
+                                <a href="https://www.linkedin.com/in/greg-baker-48ab9717b/" target="blank">LinkedIn</a>
+                                <a href="https://github.com/BakedALake" target="blank">Github</a>
+                                <a href="https://bakedalake.github.io/BakedALake/portfolio.html" target="blank">Portfolio</a>
+                            </div>
                         </div>
                     </div>
 
