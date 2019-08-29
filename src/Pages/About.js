@@ -28,6 +28,14 @@ const About = () => {
                                 <h6>ilyrodriguez@gmail.com</h6>
                             </div>
                         </div>
+                        <div><p>Ileana is a graphic designer with a passion for creativity, arts, and design.
+                            Her responsabilities for this projects were:</p>
+                        <ul>
+                        <li>UI/UX design</li>
+                        <li>Logo</li>
+                        
+                        </ul>
+                        </div>
                         <div className="member-footer">
                             <a href="https://www.linkedin.com/in/ileana-mandigo/" target="blank">LinkedIn</a>
                             <a href="https://github.com/ilyrodriguez" target="blank">Github</a>
