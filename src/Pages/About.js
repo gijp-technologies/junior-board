@@ -27,11 +27,11 @@ const About = () => {
                                 <h6>Phone: 407-259-7239</h6>
                                 <h6>ilyrodriguez@gmail.com</h6>
                             </div>
-                            <div className="card-footer">
-                                <a href="https://www.linkedin.com/in/ileana-mandigo/" target="blank">LinkedIn</a>
-                                <a href="https://github.com/ilyrodriguez" target="blank">Github</a>
-                                <a href="" target="blank">Portfolio</a>
-                            </div>
+                        </div>
+                        <div className="member-footer">
+                            <a href="https://www.linkedin.com/in/ileana-mandigo/" target="blank">LinkedIn</a>
+                            <a href="https://github.com/ilyrodriguez" target="blank">Github</a>
+                            <a href="https://ilyrodriguez.github.io/portfolio/" target="blank">Portfolio</a>
                         </div>
                     </div>
 
@@ -46,11 +46,11 @@ const About = () => {
                                 <h6>Phone: 407-259-7239</h6>
                                 <h6>semperfifcd@gmail.com</h6>
                             </div>
-                            <div className="card-footer">
-                                <a href="https://www.linkedin.com/in/greg-baker-48ab9717b/" target="blank">LinkedIn</a>
-                                <a href="https://github.com/BakedALake" target="blank">Github</a>
-                                <a href="https://bakedalake.github.io/BakedALake/portfolio.html" target="blank">Portfolio</a>
-                            </div>
+                        </div>
+                        <div className="member-footer">
+                            <a href="https://www.linkedin.com/in/greg-baker-48ab9717b/" target="blank">LinkedIn</a>
+                            <a href="https://github.com/BakedALake" target="blank">Github</a>
+                            <a href="https://bakedalake.github.io/BakedALake/portfolio.html" target="blank">Portfolio</a>
                         </div>
                     </div>
 
