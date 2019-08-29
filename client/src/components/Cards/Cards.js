@@ -44,7 +44,7 @@ class Juniors extends Component {
                         <row>
                             {/* IMAGE GOES HERE: */}
                             <div className="card-background">
-                                <img src={dev.picture} src={checkImage(dev.picture)} alt={dev.firstName} className="jr-images" />
+                                <img src={dev.picture} src={this.checkImage(dev.picture)} alt={dev.firstName} className="jr-images" />
                                 <div className="card-info" >
                                     <h4 className="junior-name">{dev.firstName + " " + dev.lastName}</h4>
                                     <h5 className="junior-location">{dev.city + ", " + dev.state}</h5>
