@@ -4,6 +4,7 @@ import "./Style.css";
 import Footer from '../components/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 import axios from 'axios';
+import formAboutNav from '../Images/formAboutNav.png';
 import { withRouter } from "react-router";
 
 class EditForm extends Component {
