@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer/Footer";
-import "./Style.css";
+import "./style.css";
 
 
 
@@ -15,4 +15,4 @@ const About = () => {
     )
 }
 
-export default Footer;
+export default About;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Col, Button, Row } from "react-bootstrap";
-import "./Style.css";
+import "./style.css";
 import Footer from '../components/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 import axios from 'axios';
