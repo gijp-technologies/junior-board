@@ -80,7 +80,7 @@
 
 .team-cards{
     width: 400px;
-    height: 500px;
+    height: 400px;
     margin-top: 155px;
     margin-left: 110px;
     margin-bottom: 100px;
@@ -137,8 +137,13 @@
     margin-top: 7px;
 }
 .member-footer {
-    margin-top: 270px;
+    margin-top: -25px;
     margin-left: 88px;
     position: relative;
     border-top: none !important;
+}
+.responsabilies{
+    padding: 40px;
+    margin-left: 7px;
+    margin-top: -10px;
 }
