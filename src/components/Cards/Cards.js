@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Style.css';
+import "../../App.css";
 // import axios from "axios";
 const JuniorsDevs = require("../API/JuniorsDevs.json");
 

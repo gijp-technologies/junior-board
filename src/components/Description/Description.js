@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Style.css';
+// import "../../App.css";
 import { Row } from 'react-bootstrap';
 
 class Description extends Component {

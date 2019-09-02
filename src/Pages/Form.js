@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Col, Button, Row } from "react-bootstrap";
 import "./Style.css";
+import "../App.css";
 import Footer from '../components/Footer/Footer';
 import Nav from '../components/Navbar/Nav';
 import formAboutNav from '../Images/formAboutNav.png';

@@ -4,6 +4,7 @@ import { Row } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import './Style.css';
+import "../../App.css";
 
 
 class Footer extends Component {

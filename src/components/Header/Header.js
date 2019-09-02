@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Style.css';
+// import "../../App.css";
 import Nav from '../Navbar/Nav';
 import background from "../../Images/background.png";
 import Description from '../Description/Description';

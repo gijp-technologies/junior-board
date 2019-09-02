@@ -3,6 +3,7 @@ import Nav from '../components/Navbar/Nav';
 import logo from '../Images/logo.png';
 import formAboutNav from '../Images/formAboutNav.png';
 import './Style.css';
+import "../App.css";
 
 const About = () => {
     return (
