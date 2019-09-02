@@ -55,5 +55,31 @@
     .icons-area{
         margin-left: 2px;
     }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+    .footer{
+        display: flex;
+        bottom:0 !important;
+        background-color: rgb(45, 46, 46);
+        color: white;
+        height: 100px;
+        /* margin-top: 40px; */
+        /* padding-top: 20px;
+        padding-left: 70px; */
+    }
+    .footer-image{
+        width: 60px;
+        height: 60px;
+        margin-left: -24px;
+    }
+    .footer-text{
+        margin-top: 16px;
+        font-size: 16px;
+        /* padding-right: 30px; */
+        padding-left: 8px;
+    }
+    .icons-area{
+        margin-left: 492px;
+    }
 }
