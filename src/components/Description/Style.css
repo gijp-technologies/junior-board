@@ -48,5 +48,34 @@
         width: 80%;
         font-size: 16px;
     }
-  
   }
+
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+    .h1, h1{
+        font-size: 26px !important;
+        margin-left: -10px;
+    }
+    .description-wrapper {
+        height: 300px;
+    }
+    .description-heading {
+        position: absolute;
+        width: 40%;
+        margin-top: 5px;
+        z-index: 3;
+    }
+    
+    .p, p{
+        font-size: 16px !important;
+        margin-left: -14px;
+    }
+    ul li{
+        display: none;
+    }
+    .description{
+        margin-block-start: 8%;
+        position: absolute;
+        width: 42%;
+        font-size: 16px;
+    }    
+}

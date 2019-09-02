@@ -82,5 +82,27 @@
         font-size: 15px !important;
         margin-bottom: 10px;
     }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+    #nav-logo {
+        width: 210px;
+        height: auto;
+        margin-left: 15%;
+    }
+    .justify-content-end {
+        margin-left: 330%;
+        position: absolute;
+    }
+    .nav-btn{
+        background-color: none!important;
+        color: white;
+        border: 2px solid white !important;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+        border-radius: 50px !important;
+        margin-right: 55px;
+        font-size: 14px !important;
+        margin-bottom: 10px;
+    }
 }
