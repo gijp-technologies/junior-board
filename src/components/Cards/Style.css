@@ -52,6 +52,7 @@
     bottom: 0 !important;
     position: absolute;
     border-top: none !important;
+    background: none;
 }
 
 .image-placeholder {
@@ -80,7 +81,6 @@
     float: left;
     margin-left: 20px;
     margin-right: 15px;
-    /* margin-top: 1%; */
 }
 
 a{
@@ -94,4 +94,52 @@ a{
 }
 .jr-ph-mail{
     font-size: 14px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    .junior-card {
+        position: relative;
+        margin-left: 6%;
+        height: 310px;
+        width: 90% !important;
+        overflow: hidden;
+        border-radius: 15px;
+        background-color: white;
+        -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+        -moz-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+        box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+    }
+    .junior-name, .junior-location{
+        font-size: 18px;
+    }
+    .jr-ph-mail{
+        font-size: 14px !important;
+    }
+
+    .skillset, h6{
+        font-size: 15px;
+    }
+    .skillset, p{
+        font-size: 14px !important;
+    }
+    .card-footer{
+        font-size: 14px;
+        background: none;
+    }
+    .jr-images{
+        width: 110px;
+        height: 110px;
+        border-radius: 25px;
+        border: 4px solid white;
+        -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+        -moz-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+        box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.36);
+        border-image-outset: 10px;
+        float: left;
+        margin-left: 20px;
+        margin-right: 15px;
+    }
+    .card-background{
+        height: 48%;
+    }
 }

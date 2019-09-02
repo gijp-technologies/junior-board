@@ -25,10 +25,13 @@
         font-size: 24px !important;
         margin-left: -40px;
     }
+    .description-wrapper {
+        height: 330px;
+    }
     .description-heading {
         position: absolute;
         width: 80%;
-        margin-top: 10px;
+        margin-top: 45px;
         z-index: 3;
     }
     
@@ -40,7 +43,7 @@
         display: none;
     }
     .description{
-        margin-block-start: 20%;
+        margin-block-start: 25%;
         position: absolute;
         width: 80%;
         font-size: 16px;

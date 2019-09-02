@@ -38,10 +38,12 @@
     font-size: 15px !important;
 
 }
+
 .navbar-light .navbar-text a {
     color: white !important;
 }
-.nav-btn{
+
+.nav-btn {
     background-color: transparent !important;
     color: white;
     border: 2px solid white !important;
@@ -52,3 +54,32 @@
     font-size: 16px !important;
 }
 
+
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+
+    #nav-logo {
+        width: 280px;
+        height: auto;
+        margin-left: 27%;
+        /* margin-bottom: 155px; */
+    }
+    .justify-content-end {
+        margin-left: 14%;
+        margin-top: 85px;
+        font-size: 15px !important;
+        position: absolute;
+    }
+
+    .nav-btn{
+        background-color: rgb(10, 185, 171) !important;
+        color: white;
+        border: 2px solid white !important;
+        padding-left: 45px !important;
+        padding-right: 45px !important;
+        border-radius: 50px !important;
+        margin-right: 55px;
+        font-size: 15px !important;
+        margin-bottom: 10px;
+    }
+}

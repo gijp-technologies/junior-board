@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Navbar, Button } from "react-bootstrap";
 import About from '../../Pages/About';
 import "./Style.css";
-import "../../App.css";
 
 class Nav extends Component {
     render() {
