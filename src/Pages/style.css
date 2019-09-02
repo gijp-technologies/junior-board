@@ -1,7 +1,4 @@
-.Main {
-    /* padding-left: 5%;
-    padding-right: 5%; */
-}
+
 .form-nav{
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,10 +7,6 @@
     z-index: -5 !important;
     top: 0 !important;
     /* margin-bottom: 100px; */
-}
-.form-area {
-    /* background: rgb(93, 218, 241);
-    background: linear-gradient(148deg, rgba(93, 218, 241, 1) 0%, rgba(31, 204, 147, 1) 100%); */
 }
 
 .form {
@@ -47,14 +40,12 @@
     font-size: 16px !important;
 }
 
-
 .about-area{
     padding-left: 200px;
     position: absolute;
 }
 .about-header{
     position: absolute;
-    /* font-size: 25px; */
     width: 570px;
     height: 160px;
     margin-top: 55px;
