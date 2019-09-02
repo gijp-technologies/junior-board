@@ -6,7 +6,6 @@
     justify-content: right;  
     z-index: -5 !important;
     top: 0 !important;
-    /* margin-bottom: 100px; */
 }
 
 .form {
@@ -138,4 +137,17 @@
     padding: 40px;
     margin-left: 7px;
     margin-top: -10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+
+.form-nav{
+    display: none;
+}
+.welcome-message{
+    margin-top: 15%;
+    margin-left: 20%;
+    font-size: 18px;
+}
+
 }

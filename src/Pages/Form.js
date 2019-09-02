@@ -118,10 +118,6 @@ class JuniorForm extends Component {
                             </Form.Control>
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridZip">
-                            <Form.Label> Zipcode </Form.Label>
-                            <Form.Control type="text" name="zipcode" placeholder="Zipcode" value={this.state.zipcode} onChange={this.handleInputChange} />
-                        </Form.Group>
                     </Row>
 
                     <Row>
